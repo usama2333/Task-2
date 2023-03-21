@@ -43,9 +43,10 @@ const Navbar = () => {
     <Fragment>
       <Container
         maxWidth="custom"
-        sx={{ backgroundImage: `url(${backgroundMain})`, height: "700px"  }}
+        sx={{position : 'relative'}}
+        
       >
-        <AppBar position="static" sx={{ backgroundColor: "transparent" , boxShadow : 'none' }}>
+        <AppBar position="absolute" sx={{ backgroundColor: "transparent" , boxShadow : 'none' }}>
           <Container maxWidth="custom" sx={{ mt: "10px" }}>
             <Toolbar disableGutters>
               {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
@@ -54,6 +55,7 @@ const Navbar = () => {
                   component="img"
                   src={navlogo}
                   sx={{
+                    ml : '50px',
                     width: "228px",
                     height: "122px",
                     display: { xs: "none", md: "flex" },
@@ -323,10 +325,11 @@ const Navbar = () => {
               <Box>
                 <Button
                   sx={{
-                    width: "177px",
-                    height: "70px",
-                    margin: "1.9px 7.6px 2.6px 1.3px",
-                    padding: "4.7px 19.6px 4px 5.3px",
+                    mr : {lg : '80px' , sm : '20px'},
+                    // width: "177px",
+                    // height: "70px",
+                    // margin: "1.9px 7.6px 2.6px 1.3px",
+                    // padding: "4.7px 19.6px 4px 5.3px",
                     boxShadow: "0 0 20px 0 rgba(0, 0, 0, 0.1)",
                     backgroundImage:
                       "linear-gradient(115deg, #662a74 6%, #802255 95%)",
@@ -337,7 +340,12 @@ const Navbar = () => {
                       width: "129px",
                       height: "22px",
                       textTransform: "capitalize",
-                      margin: "18.7px 4.4px 18.7px 18.7px",
+                      margin: { xlg :"18.7px 4.4px 18.7px 18.7px" , 
+                                lg :"14.7px 3.4px 14.7px 14.7px",
+                                md : "10.7px 3px 10.7px 10.7px",
+                                sm : "8.7px 2px 8.7px 8.7px",
+                                xs : "3.7px 1px 3.7px 3.7px",
+                      },
                       fontFamily: "Metropolis",
                       fontSize: "22px",
                       fontWeight: "normal",
@@ -347,6 +355,7 @@ const Navbar = () => {
                       letterSpacing: "0.66px",
                       textAlign: "left",
                       color: "#fff",
+                      
                     }}
                   >
                     get started
