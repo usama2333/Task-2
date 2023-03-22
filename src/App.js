@@ -1,6 +1,10 @@
 import { Fragment } from "react";
+import Buy from "./components/buy/Buy";
+import Cards from "./components/card/Cards";
 import Home from "./components/home/Home";
 import Navbar from "./components/navbar/Navbar";
+import Table from './components/table/Tablepage';
+
 
 function App() {
 
@@ -8,6 +12,9 @@ function App() {
    <Fragment>
       <Navbar/>
       <Home/>
+      <Buy/>
+      <Table/>
+      <Cards/>
    </Fragment>
   );
 }

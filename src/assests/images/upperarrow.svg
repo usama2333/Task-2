@@ -1,0 +1,22 @@
+<svg id="Group_17519" data-name="Group 17519" xmlns="http://www.w3.org/2000/svg" width="29.272" height="29.272" viewBox="0 0 29.272 29.272">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3ea510;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <path id="Path_55160" data-name="Path 55160" class="cls-1" d="M14.636,0A14.636,14.636,0,1,1,0,14.636,14.636,14.636,0,0,1,14.636,0Z" transform="translate(0 0)"/>
+  <g id="Icon_feather-trending-down" data-name="Icon feather-trending-down" transform="translate(6.024 17.504) rotate(-45)">
+    <path id="Path_55158" data-name="Path 55158" class="cls-2" d="M15.348,0,8.72,6.627,5.232,3.139,0,8.371" transform="translate(0 0.002)"/>
+    <path id="Path_55159" data-name="Path 55159" class="cls-2" d="M0,0H4.186V4.186" transform="translate(11.16 0)"/>
+  </g>
+</svg>

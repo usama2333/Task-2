@@ -89,7 +89,7 @@ const Navbar = () => {
                   open={Boolean(anchorElNav)}
                   onClose={handleCloseNavMenu}
                   sx={{
-                    display: { xs: "block", md: "none" },
+                    display: { xs: "inline-block", md: "none" , boxSizing : 'border-box' },
                   }}
                 >
                 
@@ -97,7 +97,7 @@ const Navbar = () => {
                 
                   
               <Stack
-                spacing={2}
+                // spacing={2}
                 
                 sx={{flexDirection:'column',  alignItems : 'center', display: { xs: "flex", md: "none" } }}
               >
@@ -200,14 +200,14 @@ const Navbar = () => {
                 </Menu>
               </Box>
               {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
-              <Box sx={{ flexGrow: { md: 0, sm: 1 } }}>
+              <Box sx={{ flexGrow: { md: 0, sm: 1 , xs : 1 } }}>
                 <Box
                   component="img"
                   src={navlogo}
                   sx={{
-                    width: "228px",
-                    height: "128px",
-                    display: { xs: "flex", md: "none" },
+                    width: {md : '228px',lg : '228px' , xs : '128px'},
+                    height: {md : '128px',lg :"128px", xs : '100px'},
+                    display: { xs: "none", md: "none" },
                   }}
                 ></Box>
               </Box>
@@ -335,9 +335,10 @@ const Navbar = () => {
                       "linear-gradient(115deg, #662a74 6%, #802255 95%)",
                   }}
                 >
+                
                   <Typography
                     sx={{
-                      width: "129px",
+                      width: "120px",
                       height: "22px",
                       textTransform: "capitalize",
                       margin: { xlg :"18.7px 4.4px 18.7px 18.7px" , 
@@ -347,7 +348,7 @@ const Navbar = () => {
                                 xs : "3.7px 1px 3.7px 3.7px",
                       },
                       fontFamily: "Metropolis",
-                      fontSize: "22px",
+                      fontSize: '22px',
                       fontWeight: "normal",
                       fontStretch: "normal",
                       fontStyle: "normal",
