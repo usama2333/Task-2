@@ -15,8 +15,8 @@ const Buy = () => {
     <Fragment>
       <Container maxWidth="custom" sx={{ backgroundColor: "#b5142a" }}>
         <Stack
-          direction="row"
-          alignItems="center"
+          direction={{lg : 'row'  , sm : 'row', xs : 'column'}}
+          alignItems=  {{xs : 'center' , md : 'initial'}}
           alignContent="center"
           justifyContent="space-evenly"
           sx={{ height: "auto", flexWrap : 'wrap' , pt : '25px' , pb : '25px' }}
@@ -78,7 +78,7 @@ const Buy = () => {
 
           <Box
             sx={{
-              width: {lg :'271px' , md : '180px' , sm : '150px', xs : '130px'},
+              width: {lg :'271px' , md : '180px' , sm : '150px', xs : '150px'},
 
               boxShadow: "0px 10px 20px 0px rgba(0, 0, 0, 0.1)",
               borderRadius: "8px",

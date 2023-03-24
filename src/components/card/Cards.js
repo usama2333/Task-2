@@ -1,14 +1,15 @@
 import React , {Fragment} from 'react';
-import { Container , Stack,Typography,Box,} from '@mui/material';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
+import { Container , Stack,Typography,Box, Card , CardContent, CardMedia } from '@mui/material';
 import celebs from '../../assests/images/celebs.png';
 import line from '../../assests/images/line.png';
+import downarrow from '../../assests/images/downarrow.png';
+import uparrow from '../../assests/images/uparrow.png';
 import firstlogo from '../../assests/images/firstlogo.png';
 import greenarrow from "../../assests/images/greenarrow.png";
 import mlppic from "../../assests/images/mlppic.png";
 import third from "../../assests/images/third.png";
+import arrows from "../../assests/images/arrows.png";
+import dot from "../../assests/images/dot.png";
 import dollars from "../../assests/images/dollars.png";
 import cardprofile1 from "../../assests/images/cardprofile1.png";
 import cardprofile2 from "../../assests/images/cardprofile2.png";
@@ -24,9 +25,10 @@ const Cards = () => {
       >
        <Stack
         sx={{pt : '100px' , pb : '85px' , flexWrap : 'wrap'}}
-        direction= 'row'
-        justifyContent= 'space-between'
+        direction= {{md : 'row' , xs : 'column'}}
+        justifyContent= 'space-around'
         alignItems='center'
+        spacing = {3}
        >
          <Box
           sx={{display : 'flex', flexDirection : 'column'}}
@@ -49,13 +51,13 @@ const Cards = () => {
      >
 
      
-     <Card sx={{ maxWidth: '500px',  height: '238px', width : '379px' , }}>
+     <Card sx={{ maxWidth: '500px',  height: {sm : '238px' , xs : '200px'}, width : { md : '379px',sm : '500px' , xs : '320px' } , }}>
       <CardMedia
-        sx={{ pt : '25px', pb : '25px',backgroundColor: '#b11705' }}
+        sx={{ pt : {sm : '25px' , xs : '15px'}, pb :  {sm : '25px' , xs : '15px'},backgroundColor: '#b11705' }}
       >
         
         <Box
-         sx={{display : 'flex' , justifyContent : 'space-between' , alignItems : 'center' , width : '70%' , ml : '130px'}} 
+         sx={{display : 'flex' , justifyContent : 'space-between' , alignItems : 'center' ,width :{xs : '75%' , sm : '70%'}  , ml : {xs : '100px' , sm : '130px'}}} 
         >
            <Typography
             sx={cardHeaderText}
@@ -78,7 +80,7 @@ const Cards = () => {
       <Box
          component='img'
          src = {cardprofile1}
-         sx={{position : 'absolute' , left : '-65px',top : '30px' , zIndex : 9999, overflow : 'visible'}}
+         sx={{ width : {sm : 'auto' , xs : '170px'} , height :{sm : 'auto' , xs : '170px'}  ,position : 'absolute' , left : {sm : '-65px' , xs : '-35px'},top : '30px' , zIndex : 9999, overflow : 'visible'}}
         >
 
         </Box>
@@ -165,6 +167,27 @@ const Cards = () => {
 
      
     </Card>
+
+    <Box 
+      sx={{position : 'relative'}}
+    >
+    <Box 
+     sx={{position : 'absolute', left :{md : '350px' , sm : '470px' , xs : '290px'} , top : '-10px', height : '30px' , width : '30px', borderRadius : '40px' ,backgroundColor : '#ffffff', display : 'flex' , justifyContent : 'center' , alignItems : 'center' }}
+    >
+
+   
+     <Box
+      component='img'
+      src={uparrow}
+   
+      // sx={{ display : 'inline-block'}}
+     >
+     </Box>
+
+    </Box>
+  </Box>
+
+
     </Box>
 
 
@@ -175,13 +198,13 @@ const Cards = () => {
      >
 
      
-     <Card sx={{ maxWidth: '500px',  height: '238px', width : '379px' , }}>
+<Card sx={{ maxWidth: '500px',  height: {sm : '238px' , xs : '200px'}, width : {xs : '320px' , sm : '500px' , md : '379px'} , }}>
       <CardMedia
-        sx={{ pt : '25px', pb : '25px',backgroundColor: '#b11705' }}
+        sx={{ pt : {sm : '25px' , xs : '15px'}, pb :  {sm : '25px' , xs : '15px'},backgroundColor: '#b11705' }}
       >
         
         <Box
-         sx={{display : 'flex' , justifyContent : 'space-between' , alignItems : 'center' , width : '70%' , ml : '130px'}} 
+         sx={{display : 'flex' , justifyContent : 'space-between' , alignItems : 'center' , width :{xs : '75%' , sm : '70%'}  , ml : {xs : '100px' , sm : '130px'}}} 
         >
            <Typography
             sx={cardHeaderText}
@@ -204,7 +227,7 @@ const Cards = () => {
       <Box
          component='img'
          src = {cardprofile2}
-         sx={{position : 'absolute' , left : '-65px',top : '30px' , zIndex : 9999, overflow : 'visible'}}
+         sx={{ width : {sm : 'auto' , xs : '170px'} , height :{sm : 'auto' , xs : '170px'}  ,position : 'absolute' , left : {sm : '-65px' , xs : '-35px'},top : '30px' , zIndex : 9999, overflow : 'visible'}}
         >
 
         </Box>
@@ -291,6 +314,28 @@ const Cards = () => {
 
      
     </Card>
+
+
+
+    <Box 
+      sx={{position : 'relative'}}
+    >
+    <Box 
+     sx={{position : 'absolute', left :{md : '350px' , sm : '470px' , xs : '290px'} , top : '-10px', height : '30px' , width : '30px', borderRadius : '40px' ,backgroundColor : '#ffffff', display : 'flex' , justifyContent : 'center' , alignItems : 'center' }}
+    >
+
+   
+     <Box
+      component='img'
+      src={uparrow}
+   
+      // sx={{ display : 'inline-block'}}
+     >
+     </Box>
+
+    </Box>
+  </Box>
+
     </Box>
 
 
@@ -300,13 +345,13 @@ const Cards = () => {
      >
 
      
-     <Card sx={{ maxWidth: '500px',  height: '238px', width : '379px' , }}>
+     <Card sx={{ maxWidth: '500px',  width : { md : '379px',sm : '500px' , xs : '320px' } , mt : {xlg : '0px', md : '40px'} }}>
       <CardMedia
         sx={{ pt : '25px', pb : '25px',backgroundColor: '#b11705' }}
       >
         
         <Box
-         sx={{display : 'flex' , justifyContent : 'space-between' , alignItems : 'center' , width : '70%' , ml : '130px'}} 
+         sx={{display : 'flex' , justifyContent : 'space-between' , alignItems : 'center' ,width :{xs : '73%' , sm : '70%'}  , ml : {xs : '110px' , sm : '130px'}}} 
         >
            <Typography
             sx={cardHeaderText}
@@ -329,7 +374,7 @@ const Cards = () => {
       <Box
          component='img'
          src = {cardprofilepic3}
-         sx={{position : 'absolute' , left : '-65px',top : '30px' , zIndex : 9999, overflow : 'visible'}}
+         sx={{width : {sm : 'auto' , xs : '160px'}, height : {sm : 'auto' , xs : '160px'},position : 'absolute' , left :{sm : '-65px' , xs : '-35px'} ,top : {xs : '0px' , sm :'-20px', md : '15px' , lg : '15px', xlg : '-15px'} , zIndex : 9999, overflow : 'visible'}}
         >
 
         </Box>
@@ -364,12 +409,51 @@ const Cards = () => {
 
      
     </Card>
+
+
+    <Box 
+      sx={{position : 'relative'}}
+    >
+    <Box 
+     sx={{position : 'absolute', left :{md : '350px' , sm : '470px' , xs : '290px'} , top : '-10px', height : '30px' , width : '30px', borderRadius : '40px' ,backgroundColor : '#ffffff', display : 'flex' , justifyContent : 'center' , alignItems : 'center' }}
+    >
+
+   
+     <Box
+      component='img'
+      src={downarrow}
+   
+      // sx={{ display : 'inline-block'}}
+     >
+     </Box>
+
+    </Box>
+  </Box>
+
     </Box>
 
 
 
 
        </Stack>
+
+       <Box
+        sx={{position : 'relative' , display : 'flex' , justifyContent : 'end' , alignItems : 'center', pb : '42px', mr : '40px'}}
+       >
+        <Box
+         component='img'
+         src = {arrows}
+      
+        >
+        </Box>
+        <Box
+         component='img'
+         src = {dot}
+         sx={{position : 'absolute' , right : '15px' , top : '2px'}}
+        >
+
+        </Box>
+       </Box>
 
 
      </Container>

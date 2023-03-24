@@ -28,7 +28,7 @@ const Tablepage = () => {
         >
           <TableContainer component={Paper} sx={{ overflowX: "auto" }}>
             <Table sx={{ maxWidth: "1560px" }} aria-label="simple table">
-              <TableHead>
+              <TableHead sx={{borderTop : '5px solid #5d2c72', }}>
                 <TableRow>
                   <TableCell align="center" sx={tableHeader}>
                     Name

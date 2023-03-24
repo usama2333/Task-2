@@ -34,7 +34,7 @@ const Home = () => {
           >
             <Typography
               sx={{
-                ml: "70px",
+                ml: {xlg : '70px' , md : '0px'},
                 fontFamily: "CityofEmber",
                 fontSize: { lg: "55px", md: "50px", sm: "40px", xs: "30px" },
                 fontWeight: "normal",
@@ -50,7 +50,7 @@ const Home = () => {
             </Typography>
 
             <Box sx={{ 
-                display: "flex", ml: "70px",  alignItems : 'center'
+                display: "flex", ml: {xlg : '70px' , md : '0px'},  alignItems : 'center'
                  }}>
               <Box component="img" src={line} sx={{width: '26px' ,height: '10px'}}></Box>
 
@@ -62,11 +62,12 @@ const Home = () => {
                   fontWeight: 600,
                   fontStretch: "normal",
                   fontStyle: "normal",
-                  lineHeight: 1.9,
+                  lineHeight: {xlg : 1.9 , md : 1.6 , xs : 1.2},
                   letterSpacing: "normal",
                   textAlign: "left",
                   color: "#672a72",
-                  ml : '8px'
+                  ml : '8px',
+                  mt : {xs : '10px'}
                 }}
               >
                 Trade Crypto and Fiat Currencies.

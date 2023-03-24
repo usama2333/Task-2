@@ -55,7 +55,7 @@ const Navbar = () => {
                   component="img"
                   src={navlogo}
                   sx={{
-                    ml : '50px',
+                    ml : {xlg : '50px' , md : '0px'},
                     width: "228px",
                     height: "122px",
                     display: { xs: "none", md: "flex" },
@@ -325,7 +325,7 @@ const Navbar = () => {
               <Box>
                 <Button
                   sx={{
-                    mr : {lg : '80px' , sm : '20px'},
+                    mr : {xlg : '80px' , md : '0px'},
                     // width: "177px",
                     // height: "70px",
                     // margin: "1.9px 7.6px 2.6px 1.3px",
