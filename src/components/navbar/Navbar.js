@@ -342,7 +342,7 @@ const Navbar = () => {
                       height: "22px",
                       textTransform: "capitalize",
                       margin: { xlg :"18.7px 4.4px 18.7px 18.7px" , 
-                                lg :"14.7px 3.4px 14.7px 14.7px",
+                                lg :"9.7px 2px 9.7px 9.7px",
                                 md : "10.7px 3px 10.7px 10.7px",
                                 sm : "8.7px 2px 8.7px 8.7px",
                                 xs : "3.7px 1px 3.7px 3.7px",

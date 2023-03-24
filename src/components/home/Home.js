@@ -102,13 +102,14 @@ const Home = () => {
                   xs: "400px",
                   sm: "600px",
                   md: "700px",
-                  lg: "600px",
+                  lg: "500px",
                   xlg: "700px",
                   xl: "auto",
                 },
                 height: "auto",
                 display: "inline-block",
                 mt: { sm: "70px", md: "80px", lg: "150px" },
+                ml : {lg : '-50px'}
               }}
             ></Box>
           </Box>

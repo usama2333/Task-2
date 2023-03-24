@@ -23,15 +23,15 @@ const Cards = () => {
      <Container maxWidth='custom'
       sx={{ backgroundColor: "#f9f0f6" }}
       >
-       <Stack
-        sx={{pt : '100px' , pb : '85px' , flexWrap : 'wrap'}}
-        direction= {{md : 'row' , xs : 'column'}}
-        justifyContent= 'space-around'
-        alignItems='center'
-        spacing = {3}
-       >
+
+     <Stack
+      direction={{xl : 'row',lg : 'column' , xs : 'column' }}
+      justifyContent= {{lg : 'space-around' , md : 'center'}}
+        alignItems={{lg : 'space-around'  }}
+     >
+
          <Box
-          sx={{display : 'flex', flexDirection : 'column'}}
+          sx={{display : 'flex', flexDirection : 'column' , justifyContent : 'center' , alignItems : 'center' , mt : {xs :'30px' , xl : '0px'}}}
          >
             <Box 
             component='img'
@@ -46,12 +46,23 @@ const Cards = () => {
             ></Box>
          </Box>
 
+    
+
+       <Stack
+        sx={{pt : '100px' , pb : '85px' , flexWrap : 'wrap'}}
+        direction= {{md : 'row' , xs : 'column'}}
+        justifyContent= 'space-around'
+        alignItems='center'
+        spacing = {{xl : 9 , md : 2 , xs : 4}}
+       >
+      
+
      <Box
       sx={{position : 'relative'}}
      >
 
      
-     <Card sx={{ maxWidth: '500px',  height: {sm : '238px' , xs : '200px'}, width : { md : '379px',sm : '500px' , xs : '320px' } , }}>
+     <Card sx={{ maxWidth: '500px',  height: {sm : '238px' , xs : '200px'}, width : { lg : '379px',md : '350px',sm : '500px' , xs : '320px' } , }}>
       <CardMedia
         sx={{ pt : {sm : '25px' , xs : '15px'}, pb :  {sm : '25px' , xs : '15px'},backgroundColor: '#b11705' }}
       >
@@ -198,7 +209,7 @@ const Cards = () => {
      >
 
      
-<Card sx={{ maxWidth: '500px',  height: {sm : '238px' , xs : '200px'}, width : {xs : '320px' , sm : '500px' , md : '379px'} , }}>
+<Card sx={{ maxWidth: '500px',  height: {sm : '238px' , xs : '200px'}, width : {xs : '320px' , sm : '500px' , md : '350px' , lg : '379px'} , }}>
       <CardMedia
         sx={{ pt : {sm : '25px' , xs : '15px'}, pb :  {sm : '25px' , xs : '15px'},backgroundColor: '#b11705' }}
       >
@@ -345,7 +356,7 @@ const Cards = () => {
      >
 
      
-     <Card sx={{ maxWidth: '500px',  width : { md : '379px',sm : '500px' , xs : '320px' } , mt : {xlg : '0px', md : '40px'} }}>
+     <Card sx={{ maxWidth: '500px',  width : { lg :'379px', md : '350px',sm : '500px' , xs : '320px' } , mt : {xlg : '0px', md : '40px'} }}>
       <CardMedia
         sx={{ pt : '25px', pb : '25px',backgroundColor: '#b11705' }}
       >
@@ -436,6 +447,8 @@ const Cards = () => {
 
 
        </Stack>
+
+    </Stack>
 
        <Box
         sx={{position : 'relative' , display : 'flex' , justifyContent : 'end' , alignItems : 'center', pb : '42px', mr : '40px'}}
