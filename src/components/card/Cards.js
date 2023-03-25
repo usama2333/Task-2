@@ -14,7 +14,7 @@ import dollars from "../../assests/images/dollars.png";
 import cardprofile1 from "../../assests/images/cardprofile1.png";
 import cardprofile2 from "../../assests/images/cardprofile2.png";
 import cardprofilepic3 from "../../assests/images/cardprofilepic3.png";
-import {cardHeaderText, cardV2fText , cardIconText} from '../../styles/style';
+import {cardHeaderText, cardV2fText , cardIconText, arrowBox} from '../../styles/style';
 
 const Cards = () => {
   return (
@@ -183,15 +183,13 @@ const Cards = () => {
       sx={{position : 'relative'}}
     >
     <Box 
-     sx={{position : 'absolute', left :{md : '350px' , sm : '470px' , xs : '290px'} , top : '-10px', height : '30px' , width : '30px', borderRadius : '40px' ,backgroundColor : '#ffffff', display : 'flex' , justifyContent : 'center' , alignItems : 'center' }}
+     sx={arrowBox}
     >
 
    
      <Box
       component='img'
       src={uparrow}
-   
-      // sx={{ display : 'inline-block'}}
      >
      </Box>
 
@@ -332,7 +330,7 @@ const Cards = () => {
       sx={{position : 'relative'}}
     >
     <Box 
-     sx={{position : 'absolute', left :{md : '350px' , sm : '470px' , xs : '290px'} , top : '-10px', height : '30px' , width : '30px', borderRadius : '40px' ,backgroundColor : '#ffffff', display : 'flex' , justifyContent : 'center' , alignItems : 'center' }}
+     sx={{position : 'absolute', left :{lg : '350px',md : '321px' , sm : '470px' , xs : '290px'} , top : '-10px', height : '30px' , width : '30px', borderRadius : '40px' ,backgroundColor : '#ffffff', display : 'flex' , justifyContent : 'center' , alignItems : 'center' }}
     >
 
    
@@ -426,7 +424,7 @@ const Cards = () => {
       sx={{position : 'relative'}}
     >
     <Box 
-     sx={{position : 'absolute', left :{md : '350px' , sm : '470px' , xs : '290px'} , top : '-10px', height : '30px' , width : '30px', borderRadius : '40px' ,backgroundColor : '#ffffff', display : 'flex' , justifyContent : 'center' , alignItems : 'center' }}
+     sx={{position : 'absolute', left :{lg : '350px',md : '321px' , sm : '470px' , xs : '290px'} , top : '-10px', height : '30px' , width : '30px', borderRadius : '40px' ,backgroundColor : '#ffffff', display : 'flex' , justifyContent : 'center' , alignItems : 'center' }}
     >
 
    

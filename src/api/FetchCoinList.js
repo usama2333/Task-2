@@ -1,18 +1,18 @@
 // import axios from "axios";
-// export default async function fetchgetNews(setfetchedData) {
+// export default async function fetchcoinList() {
 //     try {
 
-//       const response = await axios.get('http://192.168.77.18:18060/api/public/getNews?type=COIN')
+//       const response = await axios.get('http://192.168.77.18:18060/api/public/getCoinList')
        
 //     //   console.log(response.data);
 //      const  data = await response.data;
-//       // console.log(data);
+//       console.log(data);
+//       // console.log("hjsdasjdad",data.data.map(data=>console.log("obj",data)));
      
      
       
 //       if (response.status === 200 || response.status === 201) {
-//         setfetchedData(data);
-//         console.log('data is get successfully');
+//         console.log('Coin data is get successfully');
 //       }
 
 //     } catch(error) {

@@ -16,6 +16,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import backgroundMain from "../../assests/images/backgroundMain.png";
 import navlogo from "../../assests/images/navlogo.png";
 import searchicon from "../../assests/images/searchicon.png";
+import { getStartedBtn, homeBtn, homeButton, otherBtn, signinBtn, signinButton, simpleButton, vipTokenBtn } from "../../styles/style";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -102,18 +103,7 @@ const Navbar = () => {
                 sx={{flexDirection:'column',  alignItems : 'center', display: { xs: "flex", md: "none" } }}
               >
                     <Button
-                  sx={{
-                  
-                    height : '20px',
-                    color: "#b11705",
-                    textTransform: "capitalize",
-                    opacity: "0.8",
-                    fontFamily: "Metropolis",
-                    fontSize: "22px",
-                    fontWeight: "bold",
-                    fontStretch: "normal",
-                    fontStyle: "normal",
-                  }}
+                  sx={homeButton}
                 >
                   Home
                 </Button>
@@ -121,80 +111,30 @@ const Navbar = () => {
 <Button
                   sx={{
                    
-                    height : '22px',
-                    fontFamily: "Metropolis",
-                    fontSize: "20px",
-                    fontWeight: 600,
-                    fontStretch: "normal",
-                    fontStyle: "normal",
-                    lineHeight: '6.4',
-                    letterSpacing: "normal",
-                    textAlign: "left",
-                    color: "#000",
+                   
                   }}
                 >
                     ANNOUCEMENTS
                 </Button>
               <Button
-                  sx={{
-                    
-                    height : '22px',
-                    fontFamily: "Metropolis",
-                    fontSize: "20px",
-                    fontWeight: 600,
-                    fontStretch: "normal",
-                    fontStyle: "normal",
-                    letterSpacing: "normal",
-                    textAlign: "left",
-                    color: "#000",
-                  }}
+                  sx={simpleButton}
                 >
                     VIP FAN TOKEN
                 </Button>
 
                 <Button
-                  sx={{
-                   
-                    height : '22px',
-                    fontFamily: "Metropolis",
-                    fontSize: "20px",
-                    fontWeight: 600,
-                    fontStretch: "normal",
-                    fontStyle: "normal",
-                    lineHeight: '6.4',
-                    letterSpacing: "normal",
-                    textAlign: "left",
-                    color: "#000",
-                  }}
+                  sx={simpleButton}
                 >
                     HELP
                 </Button>
                 <Box  component="img" src={searchicon}></Box>
 
                 <Button
-                  sx={{
-                  
-                    height : '22px',
-                    color: "#b3142b",
-                    textTransform: "capitalize",
-                    opacity: "0.8",
-                    fontFamily: "Metropolis",
-                    fontSize: "22px",
-                    fontWeight: "bold",
-                    fontStretch: "normal",
-                    fontStyle: "normal",
-                    lineHeight: 1.27,
-                    letterSpacing: "0.66px",
-                    textAlign: "left",
-                  }}
+                  sx={signinButton}
                 >
                   Sign in
                 </Button>
               </Stack>
-
-
-
-
 
                   
                 </Menu>
@@ -229,94 +169,31 @@ const Navbar = () => {
                 sx={{flexGrow :1, justifyContent: 'space-around',flexDirection:'row',  alignItems : 'center', display: { xs: "none", md: "flex" } }}
               >
                     <Button
-                  sx={{
-                  
-                    height : '20px',
-                    color: "#b11705",
-                    textTransform: "capitalize",
-                    opacity: "0.8",
-                    fontFamily: "Metropolis",
-                    fontSize: "22px",
-                    fontWeight: "bold",
-                    fontStretch: "normal",
-                    fontStyle: "normal",
-                    lineHeight: 1.4,
-                    letterSpacing: "normal",
-                    textAlign: "left",
-                  }}
+                  sx={homeBtn}
                 >
                   Home
                 </Button>
 
-<Button
-                  sx={{
-                   
-                    height : '22px',
-                    fontFamily: "Metropolis",
-                    fontSize: "20px",
-                    fontWeight: 600,
-                    fontStretch: "normal",
-                    fontStyle: "normal",
-                    lineHeight: '6.4',
-                    letterSpacing: "normal",
-                    textAlign: "left",
-                    color: "#000",
-                  }}
+               <Button
+                  sx={otherBtn}
                 >
                     ANNOUCEMENTS
                 </Button>
               <Button
-                  sx={{
-                    
-                    height : '22px',
-                    fontFamily: "Metropolis",
-                    fontSize: "20px",
-                    fontWeight: 600,
-                    fontStretch: "normal",
-                    fontStyle: "normal",
-                    letterSpacing: "normal",
-                    textAlign: "left",
-                    color: "#000",
-                  }}
+                  sx={vipTokenBtn}
                 >
                     VIP FAN TOKEN
                 </Button>
 
                 <Button
-                  sx={{
-                   
-                    height : '22px',
-                    fontFamily: "Metropolis",
-                    fontSize: "20px",
-                    fontWeight: 600,
-                    fontStretch: "normal",
-                    fontStyle: "normal",
-                    lineHeight: '6.4',
-                    letterSpacing: "normal",
-                    textAlign: "left",
-                    color: "#000",
-                  }}
+                  sx={otherBtn}
                 >
                     HELP
                 </Button>
                 <Box  component="img" src={searchicon}></Box>
 
                 <Button
-                  sx={{
-                  
-                    height : '22px',
-                    color: "#b3142b",
-                    textTransform: "capitalize",
-                    opacity: "0.8",
-                    fontFamily: "Metropolis",
-                    fontSize: "22px",
-                    fontWeight: "bold",
-                    fontStretch: "normal",
-                    fontStyle: "normal",
-                    lineHeight: 1.27,
-                    letterSpacing: "0.66px",
-                    textAlign: "left",
-                  }}
+                  sx={signinBtn}
                 >
                   Sign in
                 </Button>
@@ -337,27 +214,7 @@ const Navbar = () => {
                 >
                 
                   <Typography
-                    sx={{
-                      width: "120px",
-                      height: "22px",
-                      textTransform: "capitalize",
-                      margin: { xlg :"18.7px 4.4px 18.7px 18.7px" , 
-                                lg :"9.7px 2px 9.7px 9.7px",
-                                md : "10.7px 3px 10.7px 10.7px",
-                                sm : "8.7px 2px 8.7px 8.7px",
-                                xs : "3.7px 1px 3.7px 3.7px",
-                      },
-                      fontFamily: "Metropolis",
-                      fontSize: '22px',
-                      fontWeight: "normal",
-                      fontStretch: "normal",
-                      fontStyle: "normal",
-                      lineHeight: "1.27",
-                      letterSpacing: "0.66px",
-                      textAlign: "left",
-                      color: "#fff",
-                      
-                    }}
+                    sx={getStartedBtn}
                   >
                     get started
                   </Typography>

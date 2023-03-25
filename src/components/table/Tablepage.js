@@ -9,14 +9,56 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import coinchart from "../../assests/images/coinchart.png";
 import line from "../../assests/images/line.png";
-import v2flogo from "../../assests/images/v2flogo.png";
-import zing from "../../assests/images/zing.png";
+// import v2flogo from "../../assests/images/v2flogo.png";
+// import zing from "../../assests/images/zing.png";
 import greenarrow from "../../assests/images/greenarrow.png";
 import redarrow from "../../assests/images/redarrow.png";
 import neil from "../../assests/images/neil.png";
+// import fetchcoinList from '../../api/FetchCoinList';
 import { tableHeader,simpleTableText,dText,greenTypo,v2f, zin , redTypo} from "../../styles/style";
 
 const Tablepage = () => {
+  
+  // fetchcoinList();
+
+  const headerData  = ['Name' , 'Symbol' , 'Price' , 'Stage Name' , 'Start Date' , 'End Date' , 'Remaning Supply' , 'Total Supply']
+
+   console.log('This is header data',headerData)
+  const data = [
+  
+    {
+      name: "DJ NEIL",
+      symbol: "NEIL",
+      price: 2,
+      stageName: "Private Sale 1",
+      totalSupply : 2345566,
+      remainingSupply : 2345566,
+      startDate : "2023-03-05T11:29",
+      FinalDate : "2023-03-24T11:29",
+      rank : 1,
+      imageURL : "https://rest.exchange.staging.v2f.exchange/assets/neil.png"
+  },
+  {
+      name: "V2F",
+      symbol: "V2F",
+      price : 13,
+      stageName: "Private Sale 123",
+      totalSupply: 13,
+      remainingSupply: 13,
+      startDate: "2023-03-23T11:32",
+      FinalDate: "2023-04-07T11:32",
+      rank: 12,
+      imageURL: "https://rest.exchange.staging.v2f.exchange/assets/V2F.png"
+  }
+
+]
+console.log('this is table page data');
+ console.log(data);
+
+//  data.map((data) => {
+//   console.log(data.name);
+//  })
+
   return (
     <Fragment>
       <Container maxWidth="custom" sx={{ mt: "43px", mb: "131px" }}>
@@ -30,10 +72,14 @@ const Tablepage = () => {
             <Table sx={{ maxWidth: "1560px" }} aria-label="simple table">
               <TableHead sx={{borderTop : '5px solid #5d2c72', }}>
                 <TableRow>
+                {headerData.map((data) => (
+                  
                   <TableCell align="center" sx={tableHeader}>
-                    Name
+                    {data}
                   </TableCell>
-                  <TableCell align="center" sx={tableHeader}>
+                ))}
+                  
+                  {/* <TableCell align="center" sx={tableHeader}>
                     Symbol
                   </TableCell>
                   <TableCell align="center" sx={tableHeader}>
@@ -57,10 +103,12 @@ const Tablepage = () => {
 
                   <TableCell align="center" sx={tableHeader}>
                     Total Supply
-                  </TableCell>
+                  </TableCell> */}
                 </TableRow>
               </TableHead>
               <TableBody>
+
+              {data.map((data) => (
                 <TableRow>
                   <TableCell
                     sx={{
@@ -72,13 +120,13 @@ const Tablepage = () => {
                     <Stack direction="row">
                       <Box
                         component="img"
-                        src={v2flogo}
+                        src={data.imageURL}
                         sx={{ width: "23px", height: "36px" }}
                       ></Box>
-                      <Typography sx={v2f}>v2f</Typography>
+                      <Typography sx={v2f}>{data.name}</Typography>
                     </Stack>
                   </TableCell>
-                  <TableCell sx={simpleTableText}>v2f</TableCell>
+                  <TableCell sx={simpleTableText}>{data.symbol}</TableCell>
                   <TableCell>
                     <Stack
                     //  direction='column'
@@ -93,27 +141,31 @@ const Tablepage = () => {
                           height: "13.8px",
                           display: "flex",
                           alignSelf: "center",
+                          justifyContent : 'center'
                         }}
                       ></Box>
-                      <Typography sx={greenTypo}>$3.470</Typography>
+                      <Typography sx={greenTypo}>$ {data.price}</Typography>
                     </Stack>
                   </TableCell>
-                  <TableCell sx={simpleTableText}>Private sale 5</TableCell>
-                  <TableCell sx={simpleTableText}>11d ago</TableCell>
+                  <TableCell sx={simpleTableText}>{data.stageName}</TableCell>
+                  <TableCell sx={simpleTableText}>{data.startDate}</TableCell>
                   <TableCell
                     sx={{backgroundColor: "#f9f0f6",}}
                   >
                     <Stack>
-                      <Typography sx={dText}>1d</Typography>
+                      <Typography sx={dText}>{data.FinalDate}</Typography>
                       <Typography sx={simpleTableText}>(remaning)</Typography>
                     </Stack>
                   </TableCell>
-                  <TableCell sx={simpleTableText}>5,000,000.0</TableCell>
-                  <TableCell sx={simpleTableText}>333,333,333.0</TableCell>
+                  <TableCell sx={simpleTableText}>{data.remainingSupply}</TableCell>
+                  <TableCell sx={simpleTableText}>{data.totalSupply}</TableCell>
                 </TableRow>
 
+              ))}
 
-
+                
+              
+{/* 
                 <TableRow>
                   <TableCell
                     sx={{
@@ -163,7 +215,7 @@ const Tablepage = () => {
                   </TableCell>
                   <TableCell sx={simpleTableText}>200,000.0</TableCell>
                   <TableCell sx={simpleTableText}>500,000.0</TableCell>
-                </TableRow>
+                </TableRow>*/}
 
 
                 <TableRow>
@@ -215,7 +267,7 @@ const Tablepage = () => {
                   </TableCell>
                   <TableCell sx={simpleTableText}>200,000.0</TableCell>
                   <TableCell sx={simpleTableText}>500,000.0</TableCell>
-                </TableRow>
+                </TableRow> 
 
 
                 
