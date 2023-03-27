@@ -1,5 +1,6 @@
 import axios from "axios";
 export default async function fetchgetNews(setfetchedData) {
+  
     try {
 
       const response = await axios.get('http://192.168.77.18:18060/api/public/getNews?type=COIN')

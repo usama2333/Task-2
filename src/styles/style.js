@@ -387,7 +387,7 @@ export const cebLine = {
   height: "7px",
   mt: "40px",
   display: "inline-block",
-  ml: "150px",
+  ml: {sm : '150px' , xs :'50px'},
 };
 
 export const cardSx = {
@@ -415,6 +415,17 @@ export const cardMediaBox = {
   alignItems: "center",
   width: { xs: "75%", sm: "70%" },
   ml: { xs: "100px", sm: "130px" },
+  
+};
+
+export const cardMediaBoxLast = {
+  display: "flex",
+  justifyContent: {xs : 'space-around' , sm : 'space-between'},
+  alignItems: "center",
+  width: { xs: "75%", sm: "70%" },
+  ml: { xs: "100px", sm: "130px" },
+  
+  
 };
 
 export const logoSx = {

@@ -16,7 +16,7 @@ import cardprofile2 from "../../assests/images/cardprofile2.png";
 import cardprofilepic3 from "../../assests/images/cardprofilepic3.png";
 import {cardHeaderText,cardV2fText,cardIconText,arrowBox,cebLine, cardSx,cardMediaSx,
   cardMediaBox, logoSx,celebsBox, profilePicSx,v2fValueBox,coinRow,priceRow,bottomArrow, 
-  dotBox,profilePicLast,flexBox,} from "../../styles/style";
+  dotBox,profilePicLast,flexBox, cardMediaBoxLast,} from "../../styles/style";
 import fetchCardList from "../../api/CardsApi";
 
 const Cards = () => {
@@ -41,7 +41,7 @@ const Cards = () => {
             <Box
               component="img"
               src={celebs}
-              sx={{ width: "300px", height: "140px" }}
+              sx={{ width: {xs :'200px' , sm : '300px'} , height : {sm : '150px' , xs :'100px'} }}
             ></Box>
             <Box component="img" src={line} sx={cebLine}></Box>
           </Box>
@@ -200,7 +200,6 @@ const Cards = () => {
                     component="img"
                     src={uparrow}
 
-                    // sx={{ display : 'inline-block'}}
                   ></Box>
                 </Box>
               </Box>
@@ -213,7 +212,7 @@ const Cards = () => {
                 <CardMedia
                   sx={{ pt: "25px", pb: "25px", backgroundColor: "#b11705" }}
                 >
-                  <Box sx={cardMediaBox}>
+                  <Box sx={cardMediaBoxLast}>
                     <Typography sx={cardHeaderText}>{data.userName}</Typography>
                     <Box component="img" src={third} sx={logoSx}></Box>
                   </Box>
@@ -223,7 +222,6 @@ const Cards = () => {
                   <Box
                     component="img"
                     src={cardprofilepic3}
-                    // sx={profilePicSx}
                     sx={profilePicLast}
                   ></Box>
                   <Box sx={v2fValueBox}>
