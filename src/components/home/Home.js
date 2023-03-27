@@ -27,7 +27,7 @@ const Home = () => {
             </Typography>
 
             <Box sx={{ 
-                display: "flex", ml: {xlg : '70px' , md : '0px'},  alignItems : 'center'
+                display: "flex", ml: {xlg : '70px', lg :'15px' , md : '0px'},  alignItems : 'center'
                  }}>
               <Box component="img" src={line} sx={{width: '26px' ,height: '10px'}}></Box>
 

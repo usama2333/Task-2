@@ -64,9 +64,9 @@ const Navbar = () => {
                   component="img"
                   src={navlogo}
                   sx={{
-                    ml: { xlg: "50px", md: "0px" },
-                    width: "228px",
-                    height: "122px",
+                    ml: { xlg: "50px",lg : '15px', md: "0px" },
+                    width: {xlg : '228px', lg : '180px' , md : '150px' , sm : '120px'},
+                    height: {xlg : '122px',lg :'80px' , md : '70px' , sm : '70px'},
                     display: { xs: "none", md: "flex" },
                   }}
                 ></Box>
@@ -120,7 +120,7 @@ const Navbar = () => {
                     <Button sx={simpleButton}>VIP FAN TOKEN</Button> */}
 
                     <Button sx={simpleButton}>HELP</Button>
-                    <Box component="img" src={searchicon}></Box>
+                    {/* <Box component="img" src={searchicon}></Box> */}
 
                     <Button sx={signinButton}>Sign in</Button>
                   </Stack>
@@ -159,12 +159,12 @@ const Navbar = () => {
                   display: { xs: "none", md: "flex" },
                 }}
               >
-                <Button sx={homeBtn}>Home</Button>
+                <Typography sx={homeBtn}>Home</Typography>
 
-                <Button sx={otherBtn}>ANNOUCEMENTS</Button>
-                <Button sx={vipTokenBtn}>VIP FAN TOKEN</Button>
+                <Typography sx={otherBtn}>ANNOUCEMENTS</Typography>
+                <Typography sx={vipTokenBtn}>VIP FAN TOKEN</Typography>
 
-                <Button sx={otherBtn}>HELP</Button>
+                <Typography sx={otherBtn}>HELP</Typography>
                 <Box component="img" src={searchicon}></Box>
 
                 <Button sx={signinBtn}>Sign in</Button>

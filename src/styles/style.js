@@ -1,3 +1,5 @@
+import { fontFamily } from "@mui/system";
+
 
 export const homeButton = {
   height: "20px",
@@ -40,9 +42,9 @@ export const signinButton = {
 };
 
 export const vipTokenBtn = {
-  height: "22px",
+  // height: "22px",
   fontFamily: "Metropolis",
-  fontSize: "20px",
+  fontSize: {lg : '18px' , xlg :'20px'},
   fontWeight: 600,
   fontStretch: "normal",
   fontStyle: "normal",
@@ -52,12 +54,12 @@ export const vipTokenBtn = {
 };
 
 export const homeBtn = {
-  height: "20px",
+  // height: "20px",
   color: "#b11705",
   textTransform: "capitalize",
   opacity: "0.8",
   fontFamily: "Metropolis",
-  fontSize: "22px",
+  fontSize: {lg : '20px' , xlg :'22px'},
   fontWeight: "bold",
   fontStretch: "normal",
   fontStyle: "normal",
@@ -67,12 +69,12 @@ export const homeBtn = {
 };
 
 export const signinBtn = {
-  height: "22px",
+  // height: "22px",
   color: "#b3142b",
   textTransform: "capitalize",
   opacity: "0.8",
   fontFamily: "Metropolis",
-  fontSize: "22px",
+  fontSize: {lg : '20px' , xlg :'22px'},
   fontWeight: "bold",
   fontStretch: "normal",
   fontStyle: "normal",
@@ -87,26 +89,26 @@ export const getStartedBtn = {
   textTransform: "capitalize",
   margin: {
     xlg: "18.7px 4.4px 18.7px 18.7px",
-    lg: "9.7px 2px 9.7px 9.7px",
-    md: "10.7px 3px 10.7px 10.7px",
-    sm: "8.7px 2px 8.7px 8.7px",
+    lg: "7.7px 1.8px 7.7px 7.7px",
+    md: "7.7px 1.8px 7.7px 7.7px",
+    sm: "7.7px 1.8px 7.7px 7.7px",
     xs: "3.7px 1px 3.7px 3.7px",
   },
   fontFamily: "Metropolis",
-  fontSize: "22px",
+  fontSize: '22px',
   fontWeight: "normal",
   fontStretch: "normal",
   fontStyle: "normal",
-  lineHeight: "1.27",
+  lineHeight: "1",
   letterSpacing: "0.66px",
   textAlign: "left",
   color: "#fff",
 };
 
 export const otherBtn = {
-  height: "22px",
+  // height: "22px",
   fontFamily: "Metropolis",
-  fontSize: "20px",
+  fontSize: {lg : '18px' , xlg : '22px'},
   fontWeight: 600,
   fontStretch: "normal",
   fontStyle: "normal",
@@ -132,10 +134,10 @@ export const textBox = {
 };
 
 export const newGeneration = {
-  ml: { xlg: "70px", md: "0px" },
+  ml: { xlg: "70px",lg : '15px', md: "0px" },
   fontFamily: "CityofEmber",
-  fontSize: { lg: "55px", md: "50px", sm: "40px", xs: "30px" },
-  fontWeight: "normal",
+  fontSize: { lg: "50px", md: "45px", sm: "40px", xs: "30px" },
+  // fontWeight: "600",
   fontStretch: "normal",
   fontStyle: "normal",
   lineHeight: { lg: 1.29, md: 1.2 },
@@ -163,15 +165,15 @@ export const phoneImg = {
     xs: "350px",
     sm: "600px",
     md: "700px",
-    lg: "510px",
+    lg: "500px",
     xlg: "700px",
-    xl: "auto",
+    xl: "800px",
   },
   height: "auto",
   display: "inline-block",
   mt: { xs: "60px", sm: "70px", md: "80px", lg: "150px" },
   mb: { xs: "60px", sm: "70px" },
-  ml: { lg: "-50px" },
+  mr: { lg: "20px" },
 };
 
 export const coinOff = {
@@ -189,25 +191,26 @@ export const coinOff = {
 };
 
 export const buttonOuterBox = {
-  width: { xlg: "271px", lg: "220px", md: "180px", sm: "150px", xs: "150px" },
+  // width: { xlg: "271px", lg: "220px", md: "180px", sm: "150px", xs: "150px" },
 
   boxShadow: "0px 10px 20px 0px rgba(0, 0, 0, 0.1)",
   borderRadius: "8px",
   // boxShadow : 3,
   backgroundColor: "#fff",
   mt: { md: "0px", sm: "20px", xs: "20px" },
+  mb : {xs :'20px' , sm :'0px'}
 };
 
 export const buttonInnerBox = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  height: { lg: "61px", sm: "50px", xs: "45px" },
+  // height: { lg: "61px", sm: "50px", xs: "45px" },
 };
 
 export const buyViewButton = {
   fontFamily: "Metropolis",
-  fontSize: { lg: "22px", md: "20px", sm: "18px", xs: "18px" },
+  fontSize: { lg: "19px", md: "18px", sm: "17px", xs: "17px" },
   // fontWeight: 600,
   fontStretch: "normal",
   fontStyle: "normal",
@@ -215,7 +218,9 @@ export const buyViewButton = {
   letterSpacing: "0.66",
   textAlign: "left",
   color: "#b11705",
-  height: "22px",
+  // height: "22px",
+   height: {xlg : '60px', lg: "50px", sm: "45px", xs: "40px" },
+   width: { xlg: "135px", lg: "90px", md: "90px", sm: "75px", xs: "75px" },
 };
 
 export const tableHeader = {
@@ -401,6 +406,9 @@ export const cardSx = {
     sm: "500px",
     xs: "320px",
   },
+
+  // height : '120px'
+  
 };
 
 export const cardMediaSx = {
@@ -411,10 +419,10 @@ export const cardMediaSx = {
 
 export const cardMediaBox = {
   display: "flex",
-  justifyContent: "space-between",
+  justifyContent: {xs : 'space-around' , sm : 'space-between'},
   alignItems: "center",
-  width: { xs: "75%", sm: "70%" },
-  ml: { xs: "100px", sm: "130px" },
+  width: { xs: "65%", sm: "45%" , md : '70%' },
+  ml: { xs: "100px", sm: "170px" , md : '130px'},
   
 };
 
@@ -481,8 +489,8 @@ export const v2fValueBox = {
   // width: "60%",
   ml: "120px",
   backgroundColor: "#f5fbfd",
-  paddingTop: "7px",
-  paddingBottom: "7px",
+  paddingTop: {xs :'17px' , sm :'7px'},
+  paddingBottom: {xs :'14px' , sm :'7px'},
 };
 
 export const coinRow = {
@@ -513,7 +521,7 @@ export const bottomArrow = {
     sm: "470px",
     xs: "290px",
   },
-  top: "-10px",
+  top: "-20px",
   height: "30px",
   width: "30px",
   borderRadius: "40px",
@@ -531,4 +539,5 @@ export const dotBox = {
   alignItems: "center",
   pb: "42px",
   mr: "40px",
+  mt : {xs :'40px' , sm : '40px' , md : '0px' , lg : '0px'}
 };

@@ -89,7 +89,7 @@ const Tablepage = () => {
                     <TableCell sx={{ backgroundColor: "#f9f0f6" }}>
                       <Stack>
                         <Typography sx={dText}>{data.FinalDate}</Typography>
-                        <Typography sx={simpleTableText}>(remaning)</Typography>
+                        {/* <Typography sx={simpleTableText}>(remaning)</Typography> */}
                       </Stack>
                     </TableCell>
                     <TableCell sx={simpleTableText}>
@@ -101,7 +101,7 @@ const Tablepage = () => {
                   </TableRow>
                 ))}
 
-                <TableRow>
+                 <TableRow>
                   <TableCell
                     sx={{
                       backgroundColor: "#f9f0f6",
@@ -146,7 +146,8 @@ const Tablepage = () => {
                   </TableCell>
                   <TableCell sx={simpleTableText}>200,000.0</TableCell>
                   <TableCell sx={simpleTableText}>500,000.0</TableCell>
-                </TableRow>
+                </TableRow> 
+                
               </TableBody>
             </Table>
           </TableContainer>

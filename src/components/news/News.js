@@ -22,13 +22,13 @@ const News = () => {
           alignItems={{ xs: "center", md: "initial" }}
           alignContent="center"
           justifyContent="space-evenly"
-          sx={{ height: "auto", flexWrap: "wrap", pt: "25px", pb: "25px" }}
+          sx={{ height: "auto", flexWrap: "wrap", pt: { xlg :'20px',lg : '12px' , md : '15px', sm :'0px'}, pb: {xlg :'20px',lg : '12px' , md :'15px', sm :'15px'} }}
         >
-          <Typography sx={coinOff}>{fetchedData}</Typography>
+          <Typography sx={coinOff}>50% off on all coins</Typography>
 
-          <Typography sx={coinOff}>{fetchedData}</Typography>
+          <Typography sx={coinOff}>50% off on all coins</Typography>
 
-          <Typography sx={coinOff}>{fetchedData}</Typography>
+          <Typography sx={coinOff}>50% off on all coins</Typography>
 
           <Box sx={buttonOuterBox}>
             <Box sx={buttonInnerBox}>
