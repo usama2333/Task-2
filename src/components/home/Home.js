@@ -3,6 +3,7 @@ import { Container, Stack, Typography, Box } from "@mui/material";
 import backgroundMain from "../../assests/images/backgroundMain.png";
 import mainImg from "../../assests/images/mainImg.png";
 import line from "../../assests/images/line.png";
+import { newGeneration, phoneImg, textBox, tradeCrypto } from "../../styles/style";
 
 const Home = () => {
   return (
@@ -17,34 +18,10 @@ const Home = () => {
       >
         <Stack direction={{ md: "column", lg: "row" }}>
           <Box
-            sx={{
-              flexGrow: 1,
-              mt: {
-                xl: "-150px",
-                xlg: "-100px",
-                lg: "0px",
-                md: "250px",
-                sm: "200px",
-                xs: "150px",
-              },
-              display: "flex",
-              justifyContent: "center",
-              flexDirection: "column",
-            }}
+            sx={textBox}
           >
             <Typography
-              sx={{
-                ml: {xlg : '70px' , md : '0px'},
-                fontFamily: "CityofEmber",
-                fontSize: { lg: "55px", md: "50px", sm: "40px", xs: "30px" },
-                fontWeight: "normal",
-                fontStretch: "normal",
-                fontStyle: "normal",
-                lineHeight: { lg: 1.29, md: 1.2 },
-                letterSpacing: "normal",
-                textAlign: "left",
-                color: "#b11705",
-              }}
+              sx={newGeneration}
             >
               NEW GENERATION FAN TOKENS AND CRYPTOCURRENCY EXCHAN
             </Typography>
@@ -55,37 +32,13 @@ const Home = () => {
               <Box component="img" src={line} sx={{width: '26px' ,height: '10px'}}></Box>
 
               <Typography
-                sx={{
-                  
-                  fontFamily: "Metropolis",
-                  fontSize: "30px",
-                  fontWeight: 600,
-                  fontStretch: "normal",
-                  fontStyle: "normal",
-                  lineHeight: {xlg : 1.9 , md : 1.6 , xs : 1.2},
-                  letterSpacing: "normal",
-                  textAlign: "left",
-                  color: "#672a72",
-                  ml : '8px',
-                  mt : {xs : '10px'}
-                }}
+                sx={tradeCrypto}
               >
                 Trade Crypto and Fiat Currencies.
               </Typography>
             </Box>
           </Box>
-          {/* <Box>
-                <Box
-                  component='img'
-                  src={line}
-                  
-                >
-
-                </Box>
-                <Typography>
-                    Trade Crypto and Fiat Currencies.
-                </Typography>
-            </Box> */}
+          
           <Box
             sx={{
               flexGrow: 1,
@@ -97,20 +50,7 @@ const Home = () => {
             <Box
               component="img"
               src={mainImg}
-              sx={{
-                width: {
-                  xs: "400px",
-                  sm: "600px",
-                  md: "700px",
-                  lg: "500px",
-                  xlg: "700px",
-                  xl: "auto",
-                },
-                height: "auto",
-                display: "inline-block",
-                mt: { sm: "70px", md: "80px", lg: "150px" },
-                ml : {lg : '-50px'}
-              }}
+              sx={phoneImg}
             ></Box>
           </Box>
         </Stack>

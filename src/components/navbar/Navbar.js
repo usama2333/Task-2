@@ -16,7 +16,16 @@ import AdbIcon from "@mui/icons-material/Adb";
 import backgroundMain from "../../assests/images/backgroundMain.png";
 import navlogo from "../../assests/images/navlogo.png";
 import searchicon from "../../assests/images/searchicon.png";
-import { getStartedBtn, homeBtn, homeButton, otherBtn, signinBtn, signinButton, simpleButton, vipTokenBtn } from "../../styles/style";
+import {
+  getStartedBtn,
+  homeBtn,
+  homeButton,
+  otherBtn,
+  signinBtn,
+  signinButton,
+  simpleButton,
+  vipTokenBtn,
+} from "../../styles/style";
 
 const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -42,12 +51,11 @@ const Navbar = () => {
 
   return (
     <Fragment>
-      <Container
-        maxWidth="custom"
-        sx={{position : 'relative'}}
-        
-      >
-        <AppBar position="absolute" sx={{ backgroundColor: "transparent" , boxShadow : 'none' }}>
+      <Container maxWidth="custom" sx={{ position: "relative" }}>
+        <AppBar
+          position="absolute"
+          sx={{ backgroundColor: "transparent", boxShadow: "none" }}
+        >
           <Container maxWidth="custom" sx={{ mt: "10px" }}>
             <Toolbar disableGutters>
               {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
@@ -56,7 +64,7 @@ const Navbar = () => {
                   component="img"
                   src={navlogo}
                   sx={{
-                    ml : {xlg : '50px' , md : '0px'},
+                    ml: { xlg: "50px", md: "0px" },
                     width: "228px",
                     height: "122px",
                     display: { xs: "none", md: "flex" },
@@ -64,7 +72,7 @@ const Navbar = () => {
                 ></Box>
               </Box>
 
-              <Box sx={{ flexGrow:  1, display: { xs: "flex", md: "none" } }}>
+              <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
                 <IconButton
                   size="large"
                   aria-label="account of current user"
@@ -73,7 +81,7 @@ const Navbar = () => {
                   onClick={handleOpenNavMenu}
                   color="black"
                 >
-                  <MenuIcon />
+                  <MenuIcon sx={{width : '50px' , height : '50px'}} />
                 </IconButton>
                 <Menu
                   id="menu-appbar"
@@ -90,63 +98,42 @@ const Navbar = () => {
                   open={Boolean(anchorElNav)}
                   onClose={handleCloseNavMenu}
                   sx={{
-                    display: { xs: "inline-block", md: "none" , boxSizing : 'border-box' },
+                    display: {
+                      xs: "inline-block",
+                      md: "none",
+                      boxSizing: "border-box",
+                    },
                   }}
                 >
-                
+                  <Stack
+                    spacing={1}
 
-                
-                  
-              <Stack
-                // spacing={2}
-                
-                sx={{flexDirection:'column',  alignItems : 'center', display: { xs: "flex", md: "none" } }}
-              >
-                    <Button
-                  sx={homeButton}
-                >
-                  Home
-                </Button>
+                    sx={{
+                      flexDirection: "column",
+                      alignItems: "center",
+                      display: { xs: "flex", md: "none" },
+                    }}
+                  >
+                    <Button sx={homeButton}>Home</Button>
 
-<Button
-                  sx={{
-                   
-                   
-                  }}
-                >
-                    ANNOUCEMENTS
-                </Button>
-              <Button
-                  sx={simpleButton}
-                >
-                    VIP FAN TOKEN
-                </Button>
+                    {/* <Button sx={otherBtn}>ANNOUCEMENTS</Button>
+                    <Button sx={simpleButton}>VIP FAN TOKEN</Button> */}
 
-                <Button
-                  sx={simpleButton}
-                >
-                    HELP
-                </Button>
-                <Box  component="img" src={searchicon}></Box>
+                    <Button sx={simpleButton}>HELP</Button>
+                    <Box component="img" src={searchicon}></Box>
 
-                <Button
-                  sx={signinButton}
-                >
-                  Sign in
-                </Button>
-              </Stack>
-
-                  
+                    <Button sx={signinButton}>Sign in</Button>
+                  </Stack>
                 </Menu>
               </Box>
               {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
-              <Box sx={{ flexGrow: { md: 0, sm: 1 , xs : 1 } }}>
+              <Box sx={{ flexGrow: { md: 0, sm: 1, xs: 1 } }}>
                 <Box
                   component="img"
                   src={navlogo}
                   sx={{
-                    width: {md : '228px',lg : '228px' , xs : '128px'},
-                    height: {md : '128px',lg :"128px", xs : '100px'},
+                    width: { md: "228px", lg: "228px", xs: "128px" },
+                    height: { md: "128px", lg: "128px", xs: "100px" },
                     display: { xs: "none", md: "none" },
                   }}
                 ></Box>
@@ -164,45 +151,29 @@ const Navbar = () => {
               </Box> */}
 
               <Stack
-                
-                
-                sx={{flexGrow :1, justifyContent: 'space-around',flexDirection:'row',  alignItems : 'center', display: { xs: "none", md: "flex" } }}
+                sx={{
+                  flexGrow: 1,
+                  justifyContent: "space-around",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  display: { xs: "none", md: "flex" },
+                }}
               >
-                    <Button
-                  sx={homeBtn}
-                >
-                  Home
-                </Button>
+                <Button sx={homeBtn}>Home</Button>
 
-               <Button
-                  sx={otherBtn}
-                >
-                    ANNOUCEMENTS
-                </Button>
-              <Button
-                  sx={vipTokenBtn}
-                >
-                    VIP FAN TOKEN
-                </Button>
+                <Button sx={otherBtn}>ANNOUCEMENTS</Button>
+                <Button sx={vipTokenBtn}>VIP FAN TOKEN</Button>
 
-                <Button
-                  sx={otherBtn}
-                >
-                    HELP
-                </Button>
-                <Box  component="img" src={searchicon}></Box>
+                <Button sx={otherBtn}>HELP</Button>
+                <Box component="img" src={searchicon}></Box>
 
-                <Button
-                  sx={signinBtn}
-                >
-                  Sign in
-                </Button>
+                <Button sx={signinBtn}>Sign in</Button>
               </Stack>
 
               <Box>
                 <Button
                   sx={{
-                    mr : {xlg : '80px' , md : '0px'},
+                    mr: { xlg: "80px", md: "0px" },
                     // width: "177px",
                     // height: "70px",
                     // margin: "1.9px 7.6px 2.6px 1.3px",
@@ -212,12 +183,7 @@ const Navbar = () => {
                       "linear-gradient(115deg, #662a74 6%, #802255 95%)",
                   }}
                 >
-                
-                  <Typography
-                    sx={getStartedBtn}
-                  >
-                    get started
-                  </Typography>
+                  <Typography sx={getStartedBtn}>get started</Typography>
                 </Button>
               </Box>
             </Toolbar>

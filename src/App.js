@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import Buy from "./components/buy/Buy";
+import News from "./components/news/News";
 import Cards from "./components/card/Cards";
 import Home from "./components/home/Home";
 import Navbar from "./components/navbar/Navbar";
@@ -12,7 +12,7 @@ function App() {
    <Fragment>
       <Navbar/>
       <Home/>
-      <Buy/>
+      <News/>
       <Table/>
       <Cards/>
    </Fragment>

@@ -1,13 +1,13 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue','Metropolis','City of Ember',"CityofEmber",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI' ,'MetropolisNF','Roboto', 
+  'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  'Metropolis','City of Ember',"CityofEmber", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro,'Metropolis','City of Ember',"CityofEmber", Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro'Metropolis','City of Ember',"CityofEmber", Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
