@@ -25,6 +25,7 @@ const Tablepage = () => {
   }, []);
 
   console.log(data);
+  // console.log('This is data at o',data[0].name);
 
   const headerData = [ "Name","Symbol","Price","Stage Name","Start Date","End Date","Remaning Supply","Total Supply"];
 

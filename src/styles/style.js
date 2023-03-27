@@ -435,7 +435,7 @@ export const profilePicSx = {
   width: { sm: "auto", xs: "170px" },
   height: { sm: "auto", xs: "170px" },
   position: "absolute",
-  left: { sm: "-65px", xs: "-35px" },
+  left: { sm: "-65px", xs: "-36px" },
   top: "30px",
   zIndex: 9999,
   overflow: "visible",
@@ -468,7 +468,7 @@ export const v2fValueBox = {
   justifyContent: "space-around",
   alignItems: "center",
   // width: "60%",
-  ml: "105px",
+  ml: "120px",
   backgroundColor: "#f5fbfd",
   paddingTop: "7px",
   paddingBottom: "7px",
@@ -479,7 +479,7 @@ export const coinRow = {
   justifyContent: "space-around",
   alignItems: "center",
   // width: "60%",
-  ml: "100px",
+  ml: "88px",
   mt: "10px",
 };
 
@@ -488,7 +488,7 @@ export const priceRow = {
   justifyContent: "space-around",
   alignItems: "center",
   // width: "60%",
-  ml: "100px",
+  ml: "76px",
   mt: "10px",
 };
 
