@@ -4,31 +4,15 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import { Typography, Stack } from "@mui/material";
-
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
-import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
-import backgroundMain from "../../assests/images/backgroundMain.png";
 import navlogo from "../../assests/images/navlogo.png";
 import searchicon from "../../assests/images/searchicon.png";
-import {
-  getStartedBtn,
-  homeBtn,
-  homeButton,
-  otherBtn,
-  signinBtn,
-  signinButton,
-  simpleButton,
-  vipTokenBtn,
-} from "../../styles/style";
+import {getStartedBtn,homeBtn,homeButton,otherBtn,signinBtn,signinButton,simpleButton,
+  vipTokenBtn,} from "../../styles/style";
 
-const pages = ["Products", "Pricing", "Blog"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -58,7 +42,6 @@ const Navbar = () => {
         >
           <Container maxWidth="custom" sx={{ mt: "10px" }}>
             <Toolbar disableGutters>
-              {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
               <Box sx={{ flexGrow: { md: 1, sm: 0 } }}>
                 <Box
                   component="img"
@@ -115,18 +98,12 @@ const Navbar = () => {
                     }}
                   >
                     <Button sx={homeButton}>Home</Button>
-
-                    {/* <Button sx={otherBtn}>ANNOUCEMENTS</Button>
-                    <Button sx={simpleButton}>VIP FAN TOKEN</Button> */}
-
                     <Button sx={simpleButton}>HELP</Button>
-                    {/* <Box component="img" src={searchicon}></Box> */}
-
                     <Button sx={signinButton}>Sign in</Button>
                   </Stack>
                 </Menu>
               </Box>
-              {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
+            
               <Box sx={{ flexGrow: { md: 0, sm: 1, xs: 1 } }}>
                 <Box
                   component="img"
@@ -138,17 +115,6 @@ const Navbar = () => {
                   }}
                 ></Box>
               </Box>
-              {/* <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-                {pages.map((page) => (
-                  <Button
-                    key={page}
-                    onClick={handleCloseNavMenu}
-                    sx={{ my: 2, color: "white", display: "block" }}
-                  >
-                    {page}
-                  </Button>
-                ))}
-              </Box> */}
 
               <Stack
                 sx={{
@@ -160,13 +126,10 @@ const Navbar = () => {
                 }}
               >
                 <Typography sx={homeBtn}>Home</Typography>
-
                 <Typography sx={otherBtn}>ANNOUCEMENTS</Typography>
                 <Typography sx={vipTokenBtn}>VIP FAN TOKEN</Typography>
-
                 <Typography sx={otherBtn}>HELP</Typography>
                 <Box component="img" src={searchicon}></Box>
-
                 <Button sx={signinBtn}>Sign in</Button>
               </Stack>
 
@@ -174,10 +137,6 @@ const Navbar = () => {
                 <Button
                   sx={{
                     mr: { xlg: "80px", md: "0px" },
-                    // width: "177px",
-                    // height: "70px",
-                    // margin: "1.9px 7.6px 2.6px 1.3px",
-                    // padding: "4.7px 19.6px 4px 5.3px",
                     boxShadow: "0 0 20px 0 rgba(0, 0, 0, 0.1)",
                     backgroundImage:
                       "linear-gradient(115deg, #662a74 6%, #802255 95%)",

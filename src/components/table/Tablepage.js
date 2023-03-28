@@ -10,23 +10,24 @@ import Paper from "@mui/material/Paper";
 import coinchart from "../../assests/images/coinchart.png";
 import line from "../../assests/images/line.png";
 import greenarrow from "../../assests/images/greenarrow.png";
-import redarrow from "../../assests/images/redarrow.png";
-import neil from "../../assests/images/neil.png";
+import Alert from '@mui/material/Alert';
 import fetchcoinList from "../../api/FetchCoinList";
+import notFound from '../../assests/images/notFound.jpg'
 import {tableHeader,simpleTableText,dText,greenTypo,v2f,zin, redTypo,redArrow,coinChartBox,
   coinChartSx, 
   tableCell} from "../../styles/style";
+  import CircularProgress from '@mui/material/CircularProgress';
 
 const Tablepage = () => {
   const [data, setData] = useState([]);
+  const [loading , setLoading] = useState(false);
+  const [error , setError] = useState();
 
   useEffect(() => {
-    fetchcoinList(setData);
+    fetchcoinList(setData,setLoading,setError);
   }, []);
 
   console.log(data);
-  // console.log('This is data at o',data[0].name);
-
   const headerData = [ "Name","Symbol","Price","Stage Name","Start Date","End Date","Remaning Supply","Total Supply"];
 
   return (
@@ -40,7 +41,7 @@ const Tablepage = () => {
         >
           <TableContainer
             component={Paper}
-            sx={{ overflowX: "auto", ml: { xlg: "70px", md: "0px" } }}
+            sx={{ overflowX: "auto", ml: { xlg: "70px", lg: "15px" } }}
           >
             <Table sx={{ maxWidth: "1700px" }} aria-label="simple table">
               <TableHead sx={{ borderTop: "5px solid #5d2c72" }}>
@@ -53,7 +54,15 @@ const Tablepage = () => {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {data.map((data) => (
+
+
+              {loading &&
+              <Box sx={{ display: 'flex' }}>
+                <CircularProgress />
+              </Box>
+              }
+
+              {data.map((data) => (
                   <TableRow>
                     <TableCell
                       sx={tableCell}
@@ -101,53 +110,6 @@ const Tablepage = () => {
                   </TableRow>
                 ))}
 
-                 <TableRow>
-                  <TableCell
-                    sx={{
-                      backgroundColor: "#f9f0f6",
-                      padding: {
-                        xlg: "27.9px 28px 32px 33px",
-                        md: "0px 0px 0px 10px",
-                      },
-                      boxSizing: "border-box",
-                    }}
-                  >
-                    <Stack
-                      direction="row"
-                      // justifyContent='center'
-                      alignItems="center"
-                    >
-                      <Box
-                        component="img"
-                        src={neil}
-                        sx={{ width: "34px", height: "34px" }}
-                      ></Box>
-                      <Typography sx={zin}>Dj Neil</Typography>
-                    </Stack>
-                  </TableCell>
-                  <TableCell sx={simpleTableText}>NEIL</TableCell>
-                  <TableCell>
-                    <Stack>
-                      <Box
-                        component="img"
-                        src={redarrow}
-                        sx={redArrow}
-                      ></Box>
-                      <Typography sx={redTypo}>$0.320</Typography>
-                    </Stack>
-                  </TableCell>
-                  <TableCell sx={simpleTableText}>Pre-Sale </TableCell>
-                  <TableCell sx={simpleTableText}>62d ago</TableCell>
-                  <TableCell sx={{ backgroundColor: "#f9f0f6" }}>
-                    <Stack>
-                      <Typography sx={dText}>0d</Typography>
-                      <Typography sx={simpleTableText}>(remaning)</Typography>
-                    </Stack>
-                  </TableCell>
-                  <TableCell sx={simpleTableText}>200,000.0</TableCell>
-                  <TableCell sx={simpleTableText}>500,000.0</TableCell>
-                </TableRow> 
-                
               </TableBody>
             </Table>
           </TableContainer>
@@ -167,6 +129,25 @@ const Tablepage = () => {
             ></Box>
           </Box>
         </Stack>
+
+        {!data.length && ( 
+          <Box
+           sx={{
+            display : 'flex' , justifyContent : 'center' , alignItems : 'center',
+            flexDirection : {xs :'column' , md :'row'}
+           }}
+          >
+        <Box
+         component='img'
+         src = {notFound}
+         sx={{width : '300px' , height : '300px' , display : 'inline-block'}}
+        >
+        </Box>
+        <Alert variant="filled" severity="error">
+        {error}
+       </Alert>
+        </Box> )}
+
       </Container>
     </Fragment>
   );

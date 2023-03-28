@@ -1,16 +1,18 @@
 import React, { Fragment, useEffect, useMemo, useState } from "react";
-import {
-  Container, Stack, Typography, Box, Button,} from "@mui/material";
+import { Container, Stack, Typography, Box, Button } from "@mui/material";
 import line from "../../assests/images/line.png";
-import { buttonInnerBox, buttonOuterBox, buyViewButton, coinOff, } from "../../styles/style";
-import fetchgetNews from '../../api/NewsApi';
+import {buttonInnerBox,buttonOuterBox,buyViewButton,coinOff,} from "../../styles/style";
+import fetchgetNews from "../../api/NewsApi";
+import CircularProgress from '@mui/material/CircularProgress';
 
 const News = () => {
-  const [fetchedData,setfetchedData]=useState([])
+  const [loading , setLoading] = useState(false);
+  const [error , setError] = useState();
+  const [fetchedData, setfetchedData] = useState([]);
 
-    useEffect(()=>{
-      fetchgetNews(setfetchedData);
-    },[])
+  useEffect(() => {
+    fetchgetNews(setfetchedData,setLoading,setError);
+  }, []);
 
   console.log(fetchedData);
 
@@ -22,13 +24,28 @@ const News = () => {
           alignItems={{ xs: "center", md: "initial" }}
           alignContent="center"
           justifyContent="space-evenly"
-          sx={{ height: "auto", flexWrap: "wrap", pt: { xlg :'20px',lg : '12px' , md : '15px', sm :'0px'}, pb: {xlg :'20px',lg : '12px' , md :'15px', sm :'15px'} }}
+          sx={{
+            height: "auto",
+            flexWrap: "wrap",
+            pt: { xlg: "20px", lg: "12px", md: "15px", sm: "0px" },
+            pb: { xlg: "20px", lg: "12px", md: "15px", sm: "15px" },
+          }}
         >
-          <Typography sx={coinOff}>50% off on all coins</Typography>
-
-          <Typography sx={coinOff}>50% off on all coins</Typography>
-
-          <Typography sx={coinOff}>50% off on all coins</Typography>
+         {loading &&
+          <Box sx={{ display: 'flex' }}>
+            <CircularProgress />
+         </Box>
+         }
+        
+          {fetchedData.length !== 0  ?  (
+            <>
+            <Typography sx={coinOff}>{fetchedData}</Typography>
+            <Typography sx={coinOff}>{fetchedData}</Typography>
+            <Typography sx={coinOff}>{fetchedData}</Typography>
+            </>
+          ) : (
+          <Typography sx={coinOff}>{error}</Typography>
+          )}
 
           <Box sx={buttonOuterBox}>
             <Box sx={buttonInnerBox}>

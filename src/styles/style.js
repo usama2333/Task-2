@@ -59,7 +59,7 @@ export const homeBtn = {
   textTransform: "capitalize",
   opacity: "0.8",
   fontFamily: "Metropolis",
-  fontSize: {lg : '20px' , xlg :'22px'},
+  fontSize: {lg : '20px' , xlg :'22px', md :'20px'},
   fontWeight: "bold",
   fontStretch: "normal",
   fontStyle: "normal",
@@ -74,7 +74,7 @@ export const signinBtn = {
   textTransform: "capitalize",
   opacity: "0.8",
   fontFamily: "Metropolis",
-  fontSize: {lg : '20px' , xlg :'22px'},
+  fontSize: {lg : '20px' , xlg :'22px', md : '20px'},
   fontWeight: "bold",
   fontStretch: "normal",
   fontStyle: "normal",
@@ -198,7 +198,9 @@ export const buttonOuterBox = {
   // boxShadow : 3,
   backgroundColor: "#fff",
   mt: { md: "0px", sm: "20px", xs: "20px" },
-  mb : {xs :'20px' , sm :'0px'}
+  mb : {xs :'20px' , sm :'0px'},
+  
+  
 };
 
 export const buttonInnerBox = {
