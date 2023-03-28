@@ -1,5 +1,5 @@
 import axios from "axios";
-export default async function fetchcoinList(setData, setLoading, setError) {
+export default async function fetchcoinList(setData, setLoading, setError,setShow) {
   const apiUrl = process.env.REACT_APP_API_URL;
   try {
     setLoading(true);
@@ -11,17 +11,25 @@ export default async function fetchcoinList(setData, setLoading, setError) {
       console.log("Coin data is get successfully");
       if (data.length === 0) {
         setError("Data is not found");
+        setShow(true);
         // setData([]);
       } else {
         setData(data.data);
+        setShow(false);
         console.log("data is get successfully");
       }
 
-      setLoading(false);
+      setTimeout(() => {
+        setLoading(false); 
+       }, 1000);
     }
   } catch (error) {
     console.log(error.message);
-    setLoading(false);
+
+    setTimeout(() => {
+      setLoading(false); 
+     }, 1000);
     setError(error.message);
+    setShow(true);
   }
 }

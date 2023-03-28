@@ -30,6 +30,7 @@ const Cards = () => {
   const [data, setData] = useState([]);
   const [loading , setLoading] = useState(false);
   const [error , setError] = useState();
+  const [showData , setShowData] = useState(false);
 
   const [show, setShow] = useState("auto");
   const [picTop, setpicTop] = useState("30px");
@@ -44,7 +45,7 @@ const Cards = () => {
   const [arrowThird, setArrowThird] = useState(downarrow);
 
   useEffect(() => {
-    fetchCardList(setData, notify,setLoading,setError);
+    fetchCardList(setData, notify,setLoading,setError,setShowData);
   }, []);
 
   console.log("This is card component data", data);
@@ -109,7 +110,7 @@ const Cards = () => {
          </Box>
           } */}
 
-        {!data.length && ( 
+          {showData && ( 
          
         <Alert variant="filled" severity="error">
         {error}
@@ -118,6 +119,8 @@ const Cards = () => {
          )}
 
 
+         {!showData && data.length !==0 && (
+          <>
             {data.map((data) => (
               <Box sx={{ position: "relative" }}>
                 <Card
@@ -405,6 +408,9 @@ const Cards = () => {
                 </Box>
               </Box>
             ))}
+
+            </>
+         )}
 
           </Stack>
         </Stack>
