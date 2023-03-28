@@ -23,6 +23,7 @@ const Tablepage = () => {
   const [loading , setLoading] = useState(false);
   const [error , setError] = useState();
   const [show , setShow] = useState(false);
+  
 
   useEffect(() => {
     fetchcoinList(setData,setLoading,setError,setShow);
@@ -57,39 +58,15 @@ const Tablepage = () => {
               <TableBody>
 
 
-              {loading &&
+              {/* {loading &&
               <Box sx={{ display: 'flex' }}>
                 <CircularProgress />
               </Box>
-              }
-
-            
-              </TableBody>
-            </Table>
-          </TableContainer>
-
-          <Box
-            sx={coinChartBox}
-          >
-            <Box
-              component="img"
-              src={coinchart}
-              sx={coinChartSx}
-            ></Box>
-            <Box
-              component="img"
-              src={line}
-              sx={{ width: "139px", height: "7px", mt: "15px" }}
-            ></Box>
-          </Box>
-        </Stack>
-
-        {!show && !loading ? (
-          <>
-          {!show && data.length !==0 && (
-              <>
-              {data.map((data) => (
-               
+              } */}
+             
+              {!show && data.length !==0 && (
+                <>             
+                 {data.map((data) => (
                   <TableRow>
                     <TableCell
                       sx={tableCell}
@@ -136,12 +113,31 @@ const Tablepage = () => {
                     </TableCell>
                   </TableRow>
                 ))}
-                 </>
-                )}
-          </>
-        ) : (
-          <>
-          {show && !loading && ( 
+                </>
+              )}
+
+
+              </TableBody>
+            </Table>
+          </TableContainer>
+
+          <Box
+            sx={coinChartBox}
+          >
+            <Box
+              component="img"
+              src={coinchart}
+              sx={coinChartSx}
+            ></Box>
+            <Box
+              component="img"
+              src={line}
+              sx={{ width: "139px", height: "7px", mt: "15px" }}
+            ></Box>
+          </Box>
+        </Stack>
+
+        {show && ( 
           <Box
            sx={{
             display : 'flex' , justifyContent : 'center' , alignItems : 'center',
@@ -158,10 +154,6 @@ const Tablepage = () => {
         {error}
        </Alert>
         </Box> )}
-          </>
-        )}
-
-       
 
       </Container>
     </Fragment>

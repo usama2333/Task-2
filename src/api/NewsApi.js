@@ -18,7 +18,7 @@ export default async function fetchgetNews(setfetchedData,setLoading,setError) {
         }
          setTimeout(() => {
           setLoading(false); 
-         }, 1000);
+         }, 500);
              
       }
 
@@ -27,7 +27,7 @@ export default async function fetchgetNews(setfetchedData,setLoading,setError) {
       setTimeout(() => {
         setLoading(false);
         setError(error.message);
-      }, 1000);
+      }, 500);
     
     }
   

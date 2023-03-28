@@ -27,8 +27,6 @@ export default async function fetchCardList(setData, notify , setLoading, setErr
       setLoading(false);
       setError(error.message);
       setShowData(true);
-   
-      
     }
   
   }

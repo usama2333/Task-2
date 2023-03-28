@@ -19,16 +19,11 @@ export default async function fetchcoinList(setData, setLoading, setError,setSho
         console.log("data is get successfully");
       }
 
-      setTimeout(() => {
-        setLoading(false); 
-       }, 1000);
+      setLoading(false);
     }
   } catch (error) {
     console.log(error.message);
-
-    setTimeout(() => {
-      setLoading(false); 
-     }, 1000);
+    setLoading(false);
     setError(error.message);
     setShow(true);
   }
