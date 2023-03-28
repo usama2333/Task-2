@@ -17,7 +17,7 @@ import cardprofilepic3 from "../../assests/images/cardprofilepic3.png";
 import Alert from '@mui/material/Alert';
 import {cardHeaderText, cardV2fText,cardIconText,cebLine,cardMediaSx,
   cardMediaBox,logoSx,celebsBox,v2fValueBox,coinRow,priceRow,bottomArrow, 
-  dotBox,flexBox, } from "../../styles/style";
+  dotBox,flexBox,} from "../../styles/style";
 import fetchCardList from "../../api/CardsApi";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -103,11 +103,11 @@ const Cards = () => {
             spacing={{ xl: 9, md: 2, xs: 4 }}
           >
 
-         {loading &&
+         {/* {loading &&
           <Box sx={{ display: 'flex' }}>
             <CircularProgress />
          </Box>
-          }
+          } */}
 
         {!data.length && ( 
          

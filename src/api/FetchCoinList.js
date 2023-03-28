@@ -11,7 +11,7 @@ export default async function fetchcoinList(setData, setLoading, setError) {
       console.log("Coin data is get successfully");
       if (data.length === 0) {
         setError("Data is not found");
-        setData([]);
+        // setData([]);
       } else {
         setData(data.data);
         console.log("data is get successfully");

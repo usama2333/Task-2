@@ -11,20 +11,24 @@ export default async function fetchgetNews(setfetchedData,setLoading,setError) {
        
         if(data.length === 0) {
           setError('Data is not found');
-          setfetchedData([]);
+          // setfetchedData([]);
         }else {
           setfetchedData(data.data[0].en.details);
           console.log('data is get successfully');
         }
-    
-          setLoading(false);    
+         setTimeout(() => {
+          setLoading(false); 
+         }, 1000);
+             
       }
 
     } catch(error) {
       console.log(error.message);
-      
+      setTimeout(() => {
         setLoading(false);
-      setError(error.message);
+        setError(error.message);
+      }, 1000);
+    
     }
   
   }

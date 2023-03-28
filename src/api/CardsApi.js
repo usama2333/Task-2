@@ -11,13 +11,14 @@ export default async function fetchCardList(setData, notify , setLoading, setErr
       if (response.status === 200 || response.status === 201) {
         if (data.length === 0) {
           setError("Data is not found");
-          setData([]);
+          // setData([]);
         } else {
+          setLoading(false);
           setData(data.data);
           console.log("data is get successfully");
         }
   
-        setLoading(false);
+        
         
       }
 

@@ -56,12 +56,12 @@ const Tablepage = () => {
               <TableBody>
 
 
-              {loading &&
+              {/* {loading &&
               <Box sx={{ display: 'flex' }}>
                 <CircularProgress />
               </Box>
-              }
-
+              } */}
+             
               {data.map((data) => (
                   <TableRow>
                     <TableCell

@@ -37,7 +37,7 @@ const News = () => {
          </Box>
          }
         
-          {fetchedData.length !== 0  ?  (
+          {fetchedData.length !== 0  && !loading ?  (
             <>
             <Typography sx={coinOff}>{fetchedData}</Typography>
             <Typography sx={coinOff}>{fetchedData}</Typography>
