@@ -14,7 +14,9 @@ export default async function fetchCardList(setData, notify , setLoading, setErr
           setShowData(true);
           // setData([]);
         } else {
-          setLoading(false);
+          setTimeout(() => {
+            setLoading(false); 
+           }, 1000);
           setData(data.data);
           setShowData(false);
           console.log("data is get successfully");
@@ -24,7 +26,9 @@ export default async function fetchCardList(setData, notify , setLoading, setErr
 
     } catch(error) {
       console.log(error.message);
-      setLoading(false);
+      setTimeout(() => {
+        setLoading(false); 
+       }, 1000);
       setError(error.message);
       setShowData(true);
     }

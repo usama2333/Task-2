@@ -104,22 +104,17 @@ const Cards = () => {
             spacing={{ xl: 9, md: 2, xs: 4 }}
           >
 
-         {/* {loading &&
+         {loading &&
           <Box sx={{ display: 'flex' }}>
             <CircularProgress />
          </Box>
-          } */}
+          }
 
-          {showData && ( 
-         
-        <Alert variant="filled" severity="error">
-        {error}
-       </Alert>
-        
-         )}
+          
 
-
-         {!showData && data.length !==0 && (
+         {!showData && !loading ? (
+          <>
+          {!showData && data.length !==0 && (
           <>
             {data.map((data) => (
               <Box sx={{ position: "relative" }}>
@@ -412,6 +407,20 @@ const Cards = () => {
             </>
          )}
 
+          </>
+         ) : (
+          <>
+          {showData && !loading && ( 
+         
+         <Alert variant="filled" severity="error">
+         {error}
+        </Alert>
+         
+          )}
+
+          </>
+         )}
+         
           </Stack>
         </Stack>
 
