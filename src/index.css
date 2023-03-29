@@ -17,3 +17,18 @@ code {
   font-family: source-code-pro'Metropolis','City of Ember',"CityofEmber", Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+@font-face {
+  font-family: 'City of Ember';
+  src: url(../src/assests/fonts/CityOfEmber.ttf);
+
+  /* font-family: 'Metropolis';
+  src : url(../src/assests/fonts/Metropolis-Medium.ttf) */
+}
+
+@font-face {
+
+  font-family: 'Metropolis';
+  src : url(../src/assests/fonts/Metropolis-Medium.ttf)
+}

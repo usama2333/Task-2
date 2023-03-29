@@ -94,7 +94,7 @@ export const getStartedBtn = {
     sm: "7.7px 1.8px 7.7px 7.7px",
     xs: "3.7px 1px 3.7px 3.7px",
   },
-  fontFamily: "Metropolis",
+  // fontFamily: "Metropolis",
   fontSize: '22px',
   fontWeight: "normal",
   fontStretch: "normal",
@@ -135,8 +135,8 @@ export const textBox = {
 
 export const newGeneration = {
   ml: { xlg: "70px",lg : '15px', md: "0px" },
-  fontFamily: "CityofEmber",
-  fontSize: { lg: "50px", md: "45px", sm: "40px", xs: "30px" },
+  fontFamily: "City of Ember",
+  fontSize: { xlg : '50px',lg: "45px", md: "40px", sm: "35px", xs: "30px" },
   // fontWeight: "600",
   fontStretch: "normal",
   fontStyle: "normal",
