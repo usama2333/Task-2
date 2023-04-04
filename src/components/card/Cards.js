@@ -202,11 +202,11 @@ const Cards = () => {
                 </Card>
 
                 <Box sx={{ position: "relative" }}>
-                  <Button onClick={showCard}>
+                  <Box onClick={showCard}>
                     <Box sx={bottomArrow}>
                       <Box component="img" src={arrow}></Box>
                     </Box>
-                  </Button>
+                  </Box>
                 </Box>
               </Box>
             ))}
@@ -298,11 +298,11 @@ const Cards = () => {
                 </Card>
 
                 <Box sx={{ position: "relative" }}>
-                  <Button onClick={showCardSecond}>
+                  <Box onClick={showCardSecond}>
                     <Box sx={bottomArrow}>
                       <Box component="img" src={arrowSecond}></Box>
                     </Box>
-                  </Button>
+                  </Box>
                 </Box>
               </Box>
             ))}
@@ -395,11 +395,11 @@ const Cards = () => {
                 </Card>
 
                 <Box sx={{ position: "relative" }}>
-                  <Button onClick={showCardThird}>
+                  <Box onClick={showCardThird}>
                     <Box sx={bottomArrow}>
                       <Box component="img" src={arrowThird}></Box>
                     </Box>
-                  </Button>
+                  </Box>
                 </Box>
               </Box>
             ))}

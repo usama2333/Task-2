@@ -442,6 +442,7 @@ export const logoSx = {
   textAlign: "right",
   display: "inline-block",
   mr: "30px",
+ 
 };
 
 export const celebsBox = {
@@ -523,7 +524,7 @@ export const bottomArrow = {
     sm: "470px",
     xs: "290px",
   },
-  top: "-20px",
+  top: "-12px",
   height: "30px",
   width: "30px",
   borderRadius: "40px",

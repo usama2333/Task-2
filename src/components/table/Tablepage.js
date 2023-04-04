@@ -16,6 +16,7 @@ import notFound from '../../assests/images/notFound.jpg'
 import {tableHeader,simpleTableText,dText,greenTypo,v2f,zin, redTypo,redArrow,coinChartBox,
   coinChartSx, 
   tableCell} from "../../styles/style";
+  import { greenArrowSx, headerData, lineSx, notFoundBox, notFoundSx, tabConPaper, tabImgSx, tableConSx, tableHeaderColor, tableStackDir } from "./style";
   import CircularProgress from '@mui/material/CircularProgress';
 
 const Tablepage = () => {
@@ -30,23 +31,23 @@ const Tablepage = () => {
   }, []);
 
   console.log(data);
-  const headerData = [ "Name","Symbol","Price","Stage Name","Start Date","End Date","Remaning Supply","Total Supply"];
+  
 
   return (
     <Fragment>
-      <Container maxWidth="custom" sx={{ mt: "43px", mb: "131px" }}>
+      <Container maxWidth="custom" sx={tableConSx}>
         <Stack
-          direction={{lg: "row",md: "column-reverse",sm: "column-reverse",xs: "column-reverse",}}
+          direction={tableStackDir}
           alignItems="center"
           justifyContent="space-around"
           spacing={5}
         >
           <TableContainer
             component={Paper}
-            sx={{ overflowX: "auto", ml: { xlg: "70px", lg: "15px" } }}
+            sx={tabConPaper}
           >
             <Table sx={{ maxWidth: "1700px" }} aria-label="simple table">
-              <TableHead sx={{ borderTop: "5px solid #5d2c72" }}>
+              <TableHead sx={tableHeaderColor}>
                 <TableRow>
                   {headerData.map((data) => (
                     <TableCell align="center" sx={tableHeader}>
@@ -57,13 +58,6 @@ const Tablepage = () => {
               </TableHead>
               <TableBody>
 
-
-              {/* {loading &&
-              <Box sx={{ display: 'flex' }}>
-                <CircularProgress />
-              </Box>
-              } */}
-             
               {!show && data.length !==0 && (
                 <>             
                  {data.map((data) => (
@@ -75,7 +69,7 @@ const Tablepage = () => {
                         <Box
                           component="img"
                           src={data.imageURL}
-                          sx={{ width: "23px", height: "36px" }}
+                          sx={tabImgSx}
                         ></Box>
                         <Typography sx={v2f}>{data.name}</Typography>
                       </Stack>
@@ -86,13 +80,7 @@ const Tablepage = () => {
                         <Box
                           component="img"
                           src={greenarrow}
-                          sx={{
-                            width: "13.8px",
-                            height: "13.8px",
-                            display: "flex",
-                            alignSelf: "center",
-                            justifyContent: "center",
-                          }}
+                          sx={greenArrowSx}
                         ></Box>
                         <Typography sx={greenTypo}>$ {data.price}</Typography>
                       </Stack>
@@ -116,7 +104,6 @@ const Tablepage = () => {
                 </>
               )}
 
-
               </TableBody>
             </Table>
           </TableContainer>
@@ -132,22 +119,19 @@ const Tablepage = () => {
             <Box
               component="img"
               src={line}
-              sx={{ width: "139px", height: "7px", mt: "15px" }}
+              sx={lineSx}
             ></Box>
           </Box>
         </Stack>
 
         {show && ( 
           <Box
-           sx={{
-            display : 'flex' , justifyContent : 'center' , alignItems : 'center',
-            flexDirection : {xs :'column' , md :'row'}
-           }}
+           sx={notFoundBox}
           >
         <Box
          component='img'
          src = {notFound}
-         sx={{width : '300px' , height : '300px' , display : 'inline-block'}}
+         sx={notFoundSx}
         >
         </Box>
         <Alert variant="filled" severity="error">

@@ -12,6 +12,7 @@ import navlogo from "../../assests/images/navlogo.png";
 import searchicon from "../../assests/images/searchicon.png";
 import {getStartedBtn,homeBtn,homeButton,otherBtn,signinBtn,signinButton,simpleButton,
   vipTokenBtn,} from "../../styles/style";
+import { buttonsStack, closeNavSx, getStartedButton, iconBox, iconBoxx, logoSx, mainButtonsStack, menuIconSx, navAppBAr, navCon, navLogoFlex, navLogoSx, toolbarBox, toolbarCon } from "./style";
 
 
 const Navbar = () => {
@@ -35,27 +36,22 @@ const Navbar = () => {
 
   return (
     <Fragment>
-      <Container maxWidth="custom" sx={{ position: "relative" }}>
+      <Container maxWidth="custom" sx={navCon}>
         <AppBar
           position="absolute"
-          sx={{ backgroundColor: "transparent", boxShadow: "none" }}
+          sx={navAppBAr}
         >
-          <Container maxWidth="custom" sx={{ mt: "10px" }}>
+          <Container maxWidth="custom" sx={toolbarCon}>
             <Toolbar disableGutters>
-              <Box sx={{ flexGrow: { md: 1, sm: 0 } }}>
+              <Box sx={toolbarBox}>
                 <Box
                   component="img"
                   src={navlogo}
-                  sx={{
-                    ml: { xlg: "50px",lg : '15px', md: "0px" },
-                    width: {xlg : '228px', lg : '180px' , md : '150px' , sm : '120px'},
-                    height: {xlg : '122px',lg :'80px' , md : '70px' , sm : '70px'},
-                    display: { xs: "none", md: "flex" },
-                  }}
+                  sx={logoSx}
                 ></Box>
               </Box>
 
-              <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+              <Box sx={iconBoxx}>
                 <IconButton
                   size="large"
                   aria-label="account of current user"
@@ -64,7 +60,7 @@ const Navbar = () => {
                   onClick={handleOpenNavMenu}
                   color="black"
                 >
-                  <MenuIcon sx={{width : '50px' , height : '50px'}} />
+                  <MenuIcon sx={menuIconSx} />
                 </IconButton>
                 <Menu
                   id="menu-appbar"
@@ -80,22 +76,12 @@ const Navbar = () => {
                   }}
                   open={Boolean(anchorElNav)}
                   onClose={handleCloseNavMenu}
-                  sx={{
-                    display: {
-                      xs: "inline-block",
-                      md: "none",
-                      boxSizing: "border-box",
-                    },
-                  }}
+                  sx={closeNavSx}
                 >
                   <Stack
                     spacing={1}
 
-                    sx={{
-                      flexDirection: "column",
-                      alignItems: "center",
-                      display: { xs: "flex", md: "none" },
-                    }}
+                    sx={buttonsStack}
                   >
                     <Button sx={homeButton}>Home</Button>
                     <Button sx={simpleButton}>HELP</Button>
@@ -104,26 +90,16 @@ const Navbar = () => {
                 </Menu>
               </Box>
             
-              <Box sx={{ flexGrow: { md: 0, sm: 1, xs: 1 } }}>
+              <Box sx={navLogoFlex}>
                 <Box
                   component="img"
                   src={navlogo}
-                  sx={{
-                    width: { md: "228px", lg: "228px", xs: "128px" },
-                    height: { md: "128px", lg: "128px", xs: "100px" },
-                    display: { xs: "none", md: "none" },
-                  }}
+                  sx={navLogoSx}
                 ></Box>
               </Box>
 
               <Stack
-                sx={{
-                  flexGrow: 1,
-                  justifyContent: "space-around",
-                  flexDirection: "row",
-                  alignItems: "center",
-                  display: { xs: "none", md: "flex" },
-                }}
+                sx={mainButtonsStack}
               >
                 <Typography sx={homeBtn}>Home</Typography>
                 <Typography sx={otherBtn}>ANNOUCEMENTS</Typography>
@@ -135,12 +111,7 @@ const Navbar = () => {
 
               <Box>
                 <Button
-                  sx={{
-                    mr: { xlg: "80px", md: "0px" },
-                    boxShadow: "0 0 20px 0 rgba(0, 0, 0, 0.1)",
-                    backgroundImage:
-                      "linear-gradient(115deg, #662a74 6%, #802255 95%)",
-                  }}
+                  sx={getStartedButton}
                 >
                   <Typography sx={getStartedBtn}>get started</Typography>
                 </Button>
