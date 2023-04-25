@@ -12,7 +12,9 @@ import line from "../../assests/images/line.png";
 import greenarrow from "../../assests/images/greenarrow.png";
 import Alert from '@mui/material/Alert';
 import fetchcoinList from "../../api/FetchCoinList";
-import notFound from '../../assests/images/notFound.jpg'
+import notFound from '../../assests/images/notFound.jpg';
+import neil from '../../assests/images/neil.png';
+
 import {tableHeader,simpleTableText,dText,greenTypo,v2f,zin, redTypo,redArrow,coinChartBox,
   coinChartSx, 
   tableCell} from "../../styles/style";
@@ -66,15 +68,23 @@ const Tablepage = () => {
                       sx={tableCell}
                     >
                       <Stack direction="row">
-                        <Box
+                        {/* <Box
                           component="img"
                           src={data.imageURL}
+                          // src={neil}
                           sx={tabImgSx}
-                        ></Box>
+                        ></Box> */}
                         <Typography sx={v2f}>{data.name}</Typography>
                       </Stack>
                     </TableCell>
-                    <TableCell sx={simpleTableText}>{data.symbol}</TableCell>
+                    <TableCell sx={simpleTableText}>
+                    <Box
+                          component="img"
+                          src={data.imageURL}
+                          // src={neil}
+                          sx={tabImgSx}
+                        ></Box>
+                    </TableCell>
                     <TableCell>
                       <Stack>
                         <Box
@@ -105,6 +115,8 @@ const Tablepage = () => {
               )}
 
               </TableBody>
+
+              
             </Table>
           </TableContainer>
 

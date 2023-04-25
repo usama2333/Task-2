@@ -22,6 +22,7 @@ import fetchCardList from "../../api/CardsApi";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CircularProgress from '@mui/material/CircularProgress';
+import { celebStack, celebsBoxSx, dollariconSx, dotSx, greenArrowSx, greenarrowSx, mlppicSx } from "./style";
 
 const notify = (error) => toast(error);
 
@@ -83,21 +84,13 @@ const Cards = () => {
             <Box
               component="img"
               src={celebs}
-              sx={{
-                width: { xs: "200px", sm: "300px" },
-                height: { sm: "150px", xs: "100px" },
-              }}
+              sx={celebsBoxSx}
             ></Box>
             <Box component="img" src={line} sx={cebLine}></Box>
           </Box>
 
           <Stack
-            sx={{
-              pt: { xs: "80px", sm: "100px" },
-              pb: { xs: "60px", md: "85px" },
-              flexWrap: "wrap",
-              ml: "15px",
-            }}
+            sx={celebStack}
             direction={{ md: "row", xs: "column" }}
             justifyContent="space-around"
             alignItems="center"
@@ -157,7 +150,7 @@ const Cards = () => {
                         <Box
                           component="img"
                           src={greenarrow}
-                          sx={{ width: "25px", height: "25px", mr: "7px" }}
+                          sx={greenArrowSx}
                         ></Box>
                         <Typography sx={cardIconText}>
                           {data.coinV2FValue}
@@ -172,9 +165,7 @@ const Cards = () => {
                         <Box
                           component="img"
                           src={mlppic}
-                          sx={{
-                            width: "29px",height: "29px",mr: "7px",ml: "-35px",
-                          }}
+                          sx={mlppicSx}
                         ></Box>
                         <Typography sx={cardIconText}>
                           {data.coinName}
@@ -189,9 +180,7 @@ const Cards = () => {
                         <Box
                           component="img"
                           src={dollars}
-                          sx={{
-                            width: "29px",height: "29px",mr: "7px",ml: "-61px",
-                          }}
+                          sx={dollariconSx}
                         ></Box>
                         <Typography sx={cardIconText}>
                           {data.coinValue}
@@ -253,7 +242,7 @@ const Cards = () => {
                         <Box
                           component="img"
                           src={greenarrow}
-                          sx={{ width: "25px", height: "25px", mr: "7px" }}
+                          sx={greenArrowSx}
                         ></Box>
                         <Typography sx={cardIconText}>
                           {data.coinV2FValue}
@@ -268,9 +257,7 @@ const Cards = () => {
                         <Box
                           component="img"
                           src={mlppic}
-                          sx={{
-                            width: "29px",height: "29px",mr: "7px", ml: "-35px",
-                          }}
+                          sx={mlppicSx}
                         ></Box>
                         <Typography sx={cardIconText}>
                           {data.coinName}
@@ -285,9 +272,7 @@ const Cards = () => {
                         <Box
                           component="img"
                           src={dollars}
-                          sx={{
-                            width: "29px",height: "29px",mr: "7px",ml: "-61px",
-                          }}
+                          sx={dollariconSx}
                         ></Box>
                         <Typography sx={cardIconText}>
                           {data.coinValue}
@@ -350,7 +335,7 @@ const Cards = () => {
                         <Box
                           component="img"
                           src={greenarrow}
-                          sx={{ width: "25px", height: "25px", mr: "7px" }}
+                          sx={greenArrowSx}
                         ></Box>
                         <Typography sx={cardIconText}>
                           {data.coinV2FValue}
@@ -365,9 +350,7 @@ const Cards = () => {
                         <Box
                           component="img"
                           src={mlppic}
-                          sx={{
-                            width: "29px",height: "29px",mr: "7px", ml: "-35px",
-                          }}
+                          sx={mlppicSx}
                         ></Box>
                         <Typography sx={cardIconText}>
                           {data.coinName}
@@ -382,9 +365,7 @@ const Cards = () => {
                         <Box
                           component="img"
                           src={dollars}
-                          sx={{
-                            width: "29px",height: "29px",mr: "7px", ml: "-61px",
-                          }}
+                          sx={dollariconSx}
                         ></Box>
                         <Typography sx={cardIconText}>
                           {data.coinValue}
@@ -429,7 +410,7 @@ const Cards = () => {
           <Box
             component="img"
             src={dot}
-            sx={{ position: "absolute", right: "15px", top: "2px" }}
+            sx={dotSx}
           ></Box>
         </Box>
 
